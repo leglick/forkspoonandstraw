@@ -1,0 +1,487 @@
+{
+  "before": 5506292463,
+  "after": 850716737,
+  "count": 1757,
+  "renames": [
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-colorful-weekend-in-collioure",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./cover.png",
+      "newRel": "./cover.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-2/03.png",
+      "newRel": "./images/general-2/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-3/01.png",
+      "newRel": "./images/general-3/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-4/02.png",
+      "newRel": "./images/general-4/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-4/03.png",
+      "newRel": "./images/general-4/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-5/04.png",
+      "newRel": "./images/general-5/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-5/05.png",
+      "newRel": "./images/general-5/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-5/03.png",
+      "newRel": "./images/general-5/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-5/06.png",
+      "newRel": "./images/general-5/06.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-5/09.png",
+      "newRel": "./images/general-5/09.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-6/03.png",
+      "newRel": "./images/general-6/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/general-6/05.png",
+      "newRel": "./images/general-6/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/inline/05.png",
+      "newRel": "./images/inline/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/inline/03.png",
+      "newRel": "./images/inline/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "oldRel": "./images/inline/04.png",
+      "newRel": "./images/inline/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/a-summer-life-update",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/abroad-blog",
+      "oldRel": "./cover.png",
+      "newRel": "./cover.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/andiamo-a-cinque-terre",
+      "oldRel": "./images/inline/03.png",
+      "newRel": "./images/inline/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/beating-the-winter-blues",
+      "oldRel": "./images/general-10/01.png",
+      "newRel": "./images/general-10/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/beating-the-winter-blues",
+      "oldRel": "./images/general-2/02.png",
+      "newRel": "./images/general-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/beating-the-winter-blues",
+      "oldRel": "./images/general-2/01.png",
+      "newRel": "./images/general-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/beating-the-winter-blues",
+      "oldRel": "./images/general-5/01.png",
+      "newRel": "./images/general-5/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/beating-the-winter-blues",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/des-vacances-sportives",
+      "oldRel": "./images/inline/03.png",
+      "newRel": "./images/inline/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/des-voyages-entre-villes",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/end-of-april-updates",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/feeling-gold-in-the-golden-triangle",
+      "oldRel": "./images/general-17/03.png",
+      "newRel": "./images/general-17/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/feeling-gold-in-the-golden-triangle",
+      "oldRel": "./images/inline/04.png",
+      "newRel": "./images/inline/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/it-s-all-greek-to-me-part-2-milos-santorini",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/it-s-going-to-be-a-nice-year",
+      "oldRel": "./images/inline/04.png",
+      "newRel": "./images/inline/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/let-s-go-a",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/let-s-maldives-right-in",
+      "oldRel": "./images/inline/04.png",
+      "newRel": "./images/inline/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/mumbye-america-hello-india",
+      "oldRel": "./images/inline/01.png",
+      "newRel": "./images/inline/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/my-first-month-in-toulouse",
+      "oldRel": "./images/inline/07.png",
+      "newRel": "./images/inline/07.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/obrigada-portugal",
+      "oldRel": "./images/inline/04.png",
+      "newRel": "./images/inline/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-1-setting-up-camp/01.png",
+      "newRel": "./images/day-1-setting-up-camp/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-1-setting-up-camp/02.png",
+      "newRel": "./images/day-1-setting-up-camp/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-2-otter-cove-lives-up-to-its-name/03.png",
+      "newRel": "./images/day-2-otter-cove-lives-up-to-its-name/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-2-otter-cove-lives-up-to-its-name-2/01.png",
+      "newRel": "./images/day-2-otter-cove-lives-up-to-its-name-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-2-otter-cove-lives-up-to-its-name-3/02.png",
+      "newRel": "./images/day-2-otter-cove-lives-up-to-its-name-3/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-2-otter-cove-lives-up-to-its-name-3/03.png",
+      "newRel": "./images/day-2-otter-cove-lives-up-to-its-name-3/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/day-3-double-bubble-trouble/04.png",
+      "newRel": "./images/day-3-double-bubble-trouble/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pines-popovers-park-loops-3-days-in-acadia",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/printemps-a-paris-blessed-in-barcelona",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/general/01.png",
+      "newRel": "./images/general/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/general/02.png",
+      "newRel": "./images/general/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/general-2/01.png",
+      "newRel": "./images/general-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/general/03.png",
+      "newRel": "./images/general/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/gobble-till-you-wobble/03.png",
+      "newRel": "./images/gobble-till-you-wobble/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/gobble-till-you-wobble-2/01.png",
+      "newRel": "./images/gobble-till-you-wobble-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/inline/05.png",
+      "newRel": "./images/inline/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/pumpkin-spicing-it-up-november-2019",
+      "oldRel": "./images/inline/03.png",
+      "newRel": "./images/inline/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/sleighin-it-december-19",
+      "oldRel": "./images/inline/03.png",
+      "newRel": "./images/inline/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./cover.png",
+      "newRel": "./cover.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km/01.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-2/01.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km/02.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-2/02.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-3/01.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-3/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-2/04.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-2/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-3/02.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-3/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-3/04.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-3/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-3/05.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-3/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-3/06.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-3/06.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-4/02.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-4/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-1-s-te-capestang-78-km-4/03.png",
+      "newRel": "./images/day-1-s-te-capestang-78-km-4/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/01.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/04.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/03.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/05.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km/05.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-2/02.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-3/02.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-3/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-4/01.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-4/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-3/01.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-3/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/01.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/04.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/03.png",
+      "newRel": "./images/day-2-cap-stang-port-la-nouvelle-73km-5/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km/03.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km/02.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km/04.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km-3/01.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km-3/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km-2/01.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-3-port-la-nouvelle-collioure-84km-2/02.png",
+      "newRel": "./images/day-3-port-la-nouvelle-collioure-84km-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-4-collioure-port-vendres-3km/01.png",
+      "newRel": "./images/day-4-collioure-port-vendres-3km/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-4-collioure-port-vendres-3km-2/01.png",
+      "newRel": "./images/day-4-collioure-port-vendres-3km-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-4-collioure-port-vendres-3km-2/02.png",
+      "newRel": "./images/day-4-collioure-port-vendres-3km-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-2/01.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-2/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-2/02.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-2/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-2/03.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-2/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-2/04.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-2/04.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-3/01.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-3/01.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-3/02.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-3/02.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/tour-de-fork-bike-packing-the-eurovelo-1",
+      "oldRel": "./images/day-5-port-vendres-espa-a-22km-3/03.png",
+      "newRel": "./images/day-5-port-vendres-espa-a-22km-3/03.jpg"
+    },
+    {
+      "postDir": "/Users/leah/projects/forkspoonandstraw/src/content/posts/with-great-powder",
+      "oldRel": "./images/inline/02.png",
+      "newRel": "./images/inline/02.jpg"
+    }
+  ]
+}

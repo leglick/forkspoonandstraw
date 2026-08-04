@@ -1,0 +1,215 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import TagRow from '../components/TagRow.astro';
+import Signoff from '../components/Signoff.astro';
+import ReadNext from '../components/ReadNext.astro';
+import { getCategorySlug } from '../lib/categories';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, description, date, cover, categories, tags, readTime } = post.data;
+
+// The post column caps at 680px (1440px at 2x for retina); without an
+// explicit size Astro's <Image> requests the source's full resolution,
+// which for phone photos can be several thousand pixels wide.
+const COVER_MAX_WIDTH = 1440;
+const coverWidth = Math.min(cover.width, COVER_MAX_WIDTH);
+const coverHeight = Math.round(coverWidth * (cover.height / cover.width));
+
+const dateLabel = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const allPosts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const currentIndex = allPosts.findIndex((p) => p.data.slug === post.data.slug);
+const nextPost = allPosts[(currentIndex + 1) % allPosts.length];
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: new URL(cover.src, Astro.site).toString(),
+  datePublished: date.toISOString(),
+  author: { '@type': 'Organization', name: 'Fork Spoon & Straw' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fork Spoon & Straw',
+    logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', Astro.site).toString() },
+  },
+  mainEntityOfPage: canonicalURL.toString(),
+};
+---
+
+<BaseLayout
+  title={`${title} · Fork Spoon & Straw`}
+  description={description}
+  mastheadVariant="post"
+  back={{ label: categories[0] ?? 'Home', href: categories[0] ? `/${getCategorySlug(categories[0])}` : '/' }}
+  image={cover}
+  ogType="article"
+  sticky
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+  <article class="post">
+    <header class="post-header">
+      <span class="post-pill">{categories[0]}</span>
+      <h1 class="post-title">{title}</h1>
+      {description && <p class="post-dek">{description}</p>}
+      <div class="post-meta">
+        <span>{dateLabel}</span>
+        <span class="meta-dot" aria-hidden="true"></span>
+        <span>{readTime} min read</span>
+      </div>
+    </header>
+
+    <div class="post-hero">
+      <Image src={cover} alt="" width={coverWidth} height={coverHeight} priority />
+    </div>
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <div class="post-footer">
+      <TagRow tags={tags} />
+      <Signoff />
+    </div>
+
+    {nextPost && <ReadNext post={nextPost} />}
+  </article>
+</BaseLayout>
+
+<style>
+  /* The creme "paper" is full-bleed (like home's cast-iron bands) while the
+     text itself stays capped at --measure; without this the paper reads as
+     a narrow island floating in the sand background on wide desktops. */
+  .post {
+    position: relative;
+    max-width: var(--measure);
+    margin-inline: auto;
+  }
+
+  .post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: var(--creme);
+    z-index: -1;
+  }
+
+  .post-header {
+    padding: var(--sp-22) var(--gutter-text) var(--sp-18);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .post-pill {
+    align-self: flex-start;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--roquefort);
+    color: var(--creme);
+    padding: 6px 11px;
+    border-radius: var(--radius-pill);
+  }
+
+  .post-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    font-size: 36px;
+    line-height: 0.99;
+    color: var(--espresso);
+    margin: 0;
+  }
+
+  .post-dek {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.32;
+    color: var(--roquefort-ink);
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-10);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--truffle);
+  }
+
+  .meta-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background: var(--roquefort);
+  }
+
+  .post-hero {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 100vw;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .post-hero :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .prose {
+    padding: var(--sp-26) var(--gutter-text) 6px;
+  }
+
+  .post-footer {
+    padding: var(--sp-20) var(--gutter-text) 8px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-14);
+  }
+
+  @media (min-width: 900px) {
+    .post-header {
+      padding-inline: 0;
+    }
+
+    .post-title {
+      font-size: 52px;
+      line-height: 1.03;
+    }
+
+    .post-hero {
+      height: 480px;
+    }
+
+    .prose {
+      padding-inline: 0;
+    }
+
+    .post-footer {
+      padding-inline: 0;
+    }
+  }
+</style>

@@ -1,0 +1,307 @@
+---
+// Wired to Formspree via @formspree/ajax (CDN build) -- this is a static
+// Astro site with no bundler-based component framework in play anywhere
+// else (Masthead/Gallery use the same plain-inline-<script> pattern), so
+// the vanilla-JS AJAX integration fits better than the React SDK or a
+// full-page-redirect basic-HTML submit.
+const FORMSPREE_ID = 'xbdnnqrz';
+---
+
+<section class="contact" id="contact">
+  <div class="contact-copy">
+    <span class="contact-label">Say hello</span>
+    <h2 class="contact-title">Tell me where to eat next</h2>
+    <p class="contact-intro">
+      Recommendations, questions, or &ldquo;I&rsquo;m coming to Toulouse in October, where do I
+      go?&rdquo; are all very welcome. I answer everything, eventually.
+    </p>
+  </div>
+
+  <div class="contact-success" data-fs-success></div>
+  <div class="contact-error" data-fs-error></div>
+
+  <form class="contact-form" id="contact-form">
+    <div class="contact-row">
+      <div class="contact-field">
+        <input
+          class="contact-input"
+          type="text"
+          name="name"
+          placeholder="your name"
+          aria-label="Name"
+          data-fs-field
+        />
+        <span class="field-error" data-fs-error="name"></span>
+      </div>
+      <div class="contact-field">
+        <input
+          class="contact-input"
+          type="email"
+          name="email"
+          placeholder="your email"
+          aria-label="Email"
+          required
+          data-fs-field
+        />
+        <span class="field-error" data-fs-error="email"></span>
+      </div>
+    </div>
+    <div class="contact-field">
+      <textarea
+        class="contact-textarea"
+        name="message"
+        placeholder="what's on your mind?"
+        aria-label="Message"
+        required
+        data-fs-field
+      ></textarea>
+      <span class="field-error" data-fs-error="message"></span>
+    </div>
+    <button class="contact-submit" type="submit" data-fs-submit-btn>Send it my way</button>
+  </form>
+
+  <div class="contact-divider">
+    <div class="line"></div>
+    <span>or find me</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="contact-fallbacks">
+    <a class="fallback-btn" href="https://www.instagram.com/forkspoonandstraw/" target="_blank" rel="noreferrer">Instagram</a>
+  </div>
+
+  <p class="contact-signoff">xx lele</p>
+</section>
+
+<script is:inline define:vars={{ formId: FORMSPREE_ID }}>
+  window.formspree =
+    window.formspree ||
+    function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+  formspree('initForm', { formElement: '#contact-form', formId });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<style>
+  /* Full-bleed cast-iron band behind the capped text/form column -- see the
+     same trick on PostLayout's .post; otherwise form fields stretch to the
+     full viewport width on desktop instead of a sane form width. */
+  .contact {
+    position: relative;
+    padding: var(--sp-20) var(--sp-20) var(--sp-26);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: var(--cast-iron);
+    z-index: -1;
+  }
+
+  .contact-copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+  }
+
+  .contact-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sea-salt);
+  }
+
+  .contact-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--creme);
+    margin: 0;
+  }
+
+  .contact-intro {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(253, 250, 244, 0.8);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .contact-row {
+    display: flex;
+    gap: var(--sp-8);
+  }
+
+  .contact-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* @formspree/ajax injects its own <style data-fs-error>/<[data-fs-success]>
+     rules (Bootstrap-style red/green alerts) at runtime after this stylesheet,
+     so these overrides must match its attribute selectors to win the tie. */
+  .field-error,
+  [data-fs-error][data-fs-active] {
+    font-family: var(--font-sans);
+    font-size: 12px !important;
+    color: var(--saumon) !important;
+  }
+
+  .field-error:empty {
+    display: none;
+  }
+
+  .contact-success,
+  .contact-error {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+  }
+
+  .contact-success[data-fs-success][data-fs-active] {
+    color: var(--creme) !important;
+    background: rgba(253, 250, 244, 0.1) !important;
+    border: 1px solid rgba(253, 250, 244, 0.28) !important;
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+
+  .contact-error[data-fs-error][data-fs-active] {
+    color: var(--saumon) !important;
+    font-style: normal;
+    font-family: var(--font-sans);
+    font-size: 13px !important;
+    background: rgba(224, 144, 138, 0.12) !important;
+    border: 1px solid rgba(224, 144, 138, 0.3) !important;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+
+  .contact-success:empty,
+  .contact-error:empty {
+    display: none;
+  }
+
+  [data-fs-field][aria-invalid='true'] {
+    border-color: var(--saumon) !important;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    width: 100%;
+    border-radius: 12px;
+    background: rgba(253, 250, 244, 0.1);
+    border: 1px solid rgba(253, 250, 244, 0.28);
+    padding: 0 14px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--creme);
+  }
+
+  .contact-input {
+    height: 46px;
+  }
+
+  .contact-input::placeholder,
+  .contact-textarea::placeholder {
+    color: rgba(253, 250, 244, 0.55);
+  }
+
+  .contact-textarea {
+    height: 110px;
+    padding-top: 13px;
+    resize: vertical;
+  }
+
+  .contact-submit {
+    height: 50px;
+    border-radius: var(--radius-pill);
+    background: var(--saumon);
+    border: none;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 14px;
+    color: #3b2a28;
+    cursor: pointer;
+    transition: filter 150ms ease-out;
+  }
+
+  .contact-submit:hover {
+    filter: brightness(0.94);
+  }
+
+  .contact-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-10);
+    padding-top: var(--sp-4);
+  }
+
+  .contact-divider .line {
+    flex: 1;
+    height: 1px;
+    background: rgba(253, 250, 244, 0.2);
+  }
+
+  .contact-divider span {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: rgba(253, 250, 244, 0.55);
+  }
+
+  .contact-fallbacks {
+    display: flex;
+    gap: var(--sp-8);
+  }
+
+  .fallback-btn {
+    flex: 1;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(253, 250, 244, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--creme);
+    text-decoration: none;
+  }
+
+  .contact-signoff {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--rose);
+    margin: 0;
+  }
+
+  @media (min-width: 900px) {
+    .contact {
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding: 30px 0;
+    }
+  }
+</style>

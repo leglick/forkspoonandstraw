@@ -1,0 +1,225 @@
+---
+// Home-only greeting block. Mobile shows the real portrait (small circle);
+// desktop's larger hero image uses the Toulouse sunset header photo instead.
+import { Image } from 'astro:assets';
+import portrait from '../about.png';
+import headerPhoto from '../header_final.jpeg';
+---
+
+<section class="intro-card">
+  <div class="intro-mobile">
+    <div class="intro-row">
+      <Image class="portrait portrait-sm" src={portrait} alt="lele" width={148} height={148} />
+      <div class="greeting-stack">
+        <span class="greeting">Bonjour, c&rsquo;est <em>lele</em>.</span>
+      </div>
+    </div>
+    <p class="intro-copy">
+      LA girl turned <em>toulousaine</em> (accent included!), I came for a job and stayed for the
+      Sunday market, the terrasses, and the cheese. I write about the places I eat, the places I
+      go, and the places in between!
+    </p>
+    <a class="more-link" href="/about">more about me <span aria-hidden="true">&rarr;</span></a>
+  </div>
+
+  <div class="intro-desktop">
+    <div class="intro-desktop-copy">
+      <h1 class="greeting-lg">Bonjour, c&rsquo;est <em>lele</em>.</h1>
+      <p class="tagline">
+        places, plates &amp; the occasional pun.
+      </p>
+      <p class="intro-copy-lg">
+        I traded the City of Angels for la Ville Rose and honestly, the <em>fromage</em> alone
+        justified the move. This is where I write about the tasty things I eat, the amazing places
+        I go, and the beautiful mess of building a life in a language that still manages to
+        surprise me.
+      </p>
+      <div class="intro-actions">
+        <a class="btn-solid" href="/about">More about me</a>
+      </div>
+    </div>
+    <Image class="portrait portrait-lg" src={headerPhoto} alt="" width={480} height={640} />
+  </div>
+</section>
+
+<style>
+  .portrait {
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+
+  .portrait-sm {
+    width: 74px;
+    height: 74px;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--roquefort);
+  }
+
+  /* ---- Mobile: raised card overlapping the masthead ---- */
+  .intro-mobile {
+    margin: -14px var(--gutter-card) 0;
+    border-radius: var(--radius-card);
+    background: var(--creme);
+    border: 1px solid var(--fleur-de-sel);
+    box-shadow: 0 6px 18px rgba(44, 40, 37, 0.07);
+    padding: var(--sp-26) var(--sp-20) var(--sp-20);
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .intro-row {
+    display: flex;
+    gap: var(--sp-14);
+    align-items: center;
+  }
+
+  .greeting-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .greeting {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-size: 23px;
+    line-height: 1.12;
+    color: var(--espresso);
+  }
+
+  .greeting em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--paprika);
+  }
+
+  .intro-copy {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.62;
+    color: #3d3833;
+  }
+
+  .intro-copy em {
+    color: var(--paprika);
+  }
+
+  .more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--roquefort-ink);
+    text-decoration: none;
+  }
+
+  /* ---- Desktop: full-bleed slate hero split, continues the masthead ---- */
+  .intro-desktop {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .intro-mobile {
+      display: none;
+    }
+
+    .intro-desktop {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+      background: var(--cast-iron);
+      padding: 14px var(--gutter-desktop) 76px;
+      max-width: 1280px;
+      margin-inline: auto;
+    }
+
+    .intro-desktop-copy {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-18);
+    }
+
+    .greeting-lg {
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 74px;
+      line-height: 0.94;
+      color: var(--creme);
+    }
+
+    .greeting-lg em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--rose);
+    }
+
+    .tagline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 24px;
+      line-height: 1.4;
+      color: rgba(253, 250, 244, 0.85);
+      max-width: 600px;
+    }
+
+    .intro-copy-lg {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.66;
+      color: rgba(253, 250, 244, 0.72);
+      max-width: 620px;
+    }
+
+    .intro-copy-lg em {
+      color: var(--rose);
+    }
+
+    .intro-actions {
+      display: flex;
+      gap: 12px;
+      padding-top: 4px;
+    }
+
+    .btn-solid {
+      height: 50px;
+      padding: 0 24px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: filter 150ms ease-out;
+      background: var(--saumon);
+      color: #3b2a28;
+    }
+
+    .btn-solid:hover {
+      filter: brightness(0.94);
+    }
+
+    .portrait-lg {
+      width: 100%;
+      max-width: 320px;
+      height: 320px;
+      justify-self: end;
+      border-radius: 24px;
+      border: 1px solid rgba(253, 250, 244, 0.18);
+      object-position: 50% 25%;
+    }
+  }
+</style>

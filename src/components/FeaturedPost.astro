@@ -1,0 +1,157 @@
+---
+// Note: the content schema has one `description` field (sourced from the
+// original post's own excerpt during migration), not separate short "dek" +
+// longer "excerpt" fields as the mockup shows -- using it as the excerpt
+// here rather than fabricating a punchier dek line that isn't real content.
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, description, cover, categories } = post.data;
+---
+
+<article class="featured">
+  <a class="featured-link" href={`/posts/${post.data.slug}`}>
+    <div class="featured-cover">
+      <Image src={cover} alt="" width={920} height={470} />
+    </div>
+    <div class="featured-body">
+      <span class="featured-pill">{categories[0]}</span>
+      <h2 class="featured-title">{title}</h2>
+      <p class="featured-excerpt">{description}</p>
+      <span class="read-it">read it <span aria-hidden="true">&rarr;</span></span>
+    </div>
+  </a>
+</article>
+
+<style>
+  .featured {
+    padding: 0 var(--gutter-card) var(--sp-18);
+  }
+
+  .featured-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius-card);
+    background: var(--creme);
+    border: 1px solid var(--fleur-de-sel);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition:
+      transform 150ms ease-out,
+      box-shadow 150ms ease-out;
+  }
+
+  .featured-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .featured-cover :global(img) {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .featured-body {
+    padding: var(--sp-18);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .featured-pill {
+    align-self: flex-start;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--roquefort);
+    color: var(--creme);
+    padding: 6px 11px;
+    border-radius: var(--radius-pill);
+  }
+
+  .featured-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-size: 32px;
+    line-height: 1.02;
+    color: var(--espresso);
+  }
+
+  .featured-excerpt {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.62;
+    color: #3d3833;
+  }
+
+  .read-it {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--roquefort-ink);
+  }
+
+  @media (min-width: 900px) {
+    .featured {
+      padding: 0 var(--gutter-desktop) 40px;
+      max-width: 1280px;
+      margin-inline: auto;
+    }
+
+    .featured-link {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      align-items: stretch;
+      border-radius: 24px;
+    }
+
+    .featured-cover {
+      min-height: 470px;
+      height: 100%;
+    }
+
+    .featured-cover :global(img) {
+      height: 100%;
+      min-height: 470px;
+    }
+
+    .featured-body {
+      padding: 44px 44px 44px 40px;
+      gap: var(--sp-14);
+      justify-content: center;
+    }
+
+    .featured-pill {
+      padding: 6px 12px;
+    }
+
+    .featured-title {
+      font-size: 52px;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    .featured-excerpt {
+      font-size: 19px;
+      line-height: 1.66;
+    }
+
+    .read-it {
+      font-size: 14px;
+    }
+  }
+</style>

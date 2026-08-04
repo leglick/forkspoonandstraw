@@ -1,0 +1,207 @@
+---
+// The full chronological list of every post, regardless of category. Linked
+// from the home page's "see all posts" once the feed there is truncated to
+// a curated latest handful.
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="All Posts · Fork Spoon & Straw" description="Every post, in order." mastheadVariant="default">
+  <header class="archive-header">
+    <div class="eyebrow-row">
+      <div class="rule"></div>
+      <span class="eyebrow">Everything</span>
+    </div>
+    <h1 class="archive-title">All posts</h1>
+    <p class="archive-dek">The whole collection. (Grab a glass!)</p>
+    <span class="archive-count">{posts.length} entries</span>
+  </header>
+
+  <div class="thumb-rows">
+    {
+      posts.map((post) => (
+        <a class="thumb-row" href={`/posts/${post.data.slug}`}>
+          <div class="thumb">
+            <Image src={post.data.cover} alt="" width={100} height={126} />
+          </div>
+          <div class="thumb-stack">
+            <span class="thumb-category">{post.data.categories[0]}</span>
+            <span class="thumb-meta">
+              {String(post.data.date.getDate()).padStart(2, '0')}.
+              {String(post.data.date.getMonth() + 1).padStart(2, '0')} &middot; {post.data.readTime} min
+            </span>
+            <span class="thumb-title">{post.data.title}</span>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  /* Full-bleed cast-iron band behind the capped text column -- see the same
+     trick on PostLayout's .post; otherwise this reads as a narrow island
+     floating in the sand background on wide desktops. */
+  .archive-header {
+    position: relative;
+    padding: 0 var(--sp-18) var(--sp-26);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .archive-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: var(--cast-iron);
+    z-index: -1;
+  }
+
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-10);
+  }
+
+  .rule {
+    width: var(--sp-26);
+    height: 2px;
+    background: var(--sea-salt);
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sea-salt);
+  }
+
+  .archive-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    font-size: 38px;
+    line-height: 0.98;
+    color: var(--creme);
+    margin: 0;
+  }
+
+  .archive-dek {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(253, 250, 244, 0.82);
+    max-width: var(--measure);
+  }
+
+  .archive-count {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: rgba(253, 250, 244, 0.55);
+  }
+
+  .thumb-rows {
+    padding: var(--sp-20) var(--gutter-card) var(--sp-22);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .thumb-row {
+    display: flex;
+    gap: var(--sp-14);
+    background: var(--creme);
+    border: 1px solid var(--fleur-de-sel);
+    border-radius: var(--radius-grid-card);
+    padding: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 150ms ease-out;
+  }
+
+  .thumb-row:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .thumb {
+    width: 100px;
+    height: 126px;
+    flex-shrink: 0;
+    border-radius: var(--radius-thumb-sm);
+    overflow: hidden;
+  }
+
+  .thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .thumb-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 2px;
+    justify-content: center;
+  }
+
+  .thumb-category {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--paprika);
+  }
+
+  .thumb-meta {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--truffle);
+  }
+
+  .thumb-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+    line-height: 1.1;
+    color: var(--espresso);
+  }
+
+  @media (min-width: 900px) {
+    .archive-header,
+    .thumb-rows {
+      max-width: 1120px;
+      margin-inline: auto;
+      padding-inline: var(--gutter-desktop);
+    }
+
+    .archive-header {
+      padding-block: 32px 40px;
+    }
+
+    .archive-title {
+      font-size: 52px;
+    }
+
+    .thumb-rows {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-14);
+    }
+  }
+</style>

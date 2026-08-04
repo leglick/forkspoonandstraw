@@ -1,0 +1,35 @@
+---
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <div class="tag-row">
+      {tags.map((tag) => (
+        <span class="tag-pill">#{tag}</span>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .tag-row {
+    display: flex;
+    gap: var(--sp-8);
+    flex-wrap: wrap;
+    padding-top: 2px;
+  }
+
+  .tag-pill {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    padding: 7px 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(91, 125, 143, 0.45);
+    color: var(--roquefort-ink);
+  }
+</style>

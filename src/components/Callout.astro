@@ -1,0 +1,47 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = 'If you only do one thing' } = Astro.props;
+---
+
+<div class="callout">
+  <span class="callout-label">{label}</span>
+  <p class="callout-body"><slot /></p>
+</div>
+
+<style>
+  .callout {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 100vw;
+    background: var(--roquefort);
+    padding: var(--sp-26) var(--gutter-text);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+    margin-block: var(--sp-44);
+  }
+
+  .callout-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rose);
+  }
+
+  .callout-body {
+    max-width: var(--measure);
+    margin-inline: auto;
+    width: 100%;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.35;
+    color: var(--creme);
+  }
+</style>

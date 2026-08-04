@@ -1,0 +1,170 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IntroCard from '../components/IntroCard.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
+import PostCard from '../components/PostCard.astro';
+import NewsletterBlock from '../components/NewsletterBlock.astro';
+
+const allPosts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const FEED_SIZE = 9;
+
+const [featured, ...rest] = allPosts;
+const feedPosts = rest.slice(0, FEED_SIZE);
+
+const latestLabel = featured.data.date.toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+});
+---
+
+<BaseLayout
+  title="Fork Spoon & Straw"
+  description="Places, plates & the occasional pun."
+  mastheadVariant="home"
+>
+  <IntroCard />
+  <CategoryGrid />
+
+  <div class="latest-rule">
+    <span class="latest-label">Latest</span>
+    <div class="rule-line"></div>
+    <span class="latest-date">{latestLabel}</span>
+  </div>
+
+  <FeaturedPost post={featured} />
+
+  <div class="feed">
+    {
+      feedPosts.map((post, i) => (
+        <div class="feed-item">
+          <PostCard post={post} size={i % 2 === 0 ? 'lg' : 'sm'} />
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="entries-pill-wrap">
+    <a class="entries-pill" href="/archive">see all {allPosts.length} posts <span aria-hidden="true">&rarr;</span></a>
+  </div>
+
+  <NewsletterBlock />
+</BaseLayout>
+
+<style>
+  .latest-rule {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-10);
+    padding: 0 var(--sp-20) var(--sp-14);
+  }
+
+  .latest-label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--roquefort);
+    white-space: nowrap;
+  }
+
+  .rule-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(91, 125, 143, 0.35);
+  }
+
+  .latest-date {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--truffle);
+    white-space: nowrap;
+  }
+
+  .feed {
+    padding: 0 var(--gutter-card) var(--sp-18);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .entries-pill-wrap {
+    padding: 0 var(--sp-20) var(--sp-26);
+  }
+
+  .entries-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 50px;
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--roquefort);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--roquefort-ink);
+    text-decoration: none;
+    transition: background 150ms ease-out;
+  }
+
+  .entries-pill:hover {
+    background: rgba(91, 125, 143, 0.08);
+  }
+
+  @media (min-width: 900px) {
+    .latest-rule {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding: 44px var(--gutter-desktop) 20px;
+      gap: 16px;
+    }
+
+    .latest-label {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+    }
+
+    .latest-date {
+      font-size: 12px;
+    }
+
+    .feed {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding: 0 var(--gutter-desktop) 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .feed-item:nth-child(3n + 1) {
+      padding-top: 0;
+    }
+
+    .feed-item:nth-child(3n + 2) {
+      padding-top: 52px;
+    }
+
+    .feed-item:nth-child(3n + 3) {
+      padding-top: 14px;
+    }
+
+    .entries-pill-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 20px var(--gutter-desktop) 44px;
+    }
+
+    .entries-pill {
+      width: auto;
+      padding: 0 34px;
+      height: 52px;
+    }
+  }
+</style>

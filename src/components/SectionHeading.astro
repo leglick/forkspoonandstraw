@@ -1,0 +1,65 @@
+---
+interface Props {
+  stop: string;
+  place: string;
+  tagline?: string;
+}
+
+const { stop, place, tagline } = Astro.props;
+---
+
+<div class="section-heading">
+  <div class="rule-row">
+    <div class="rule"></div>
+    <span class="stop-label">{stop}</span>
+  </div>
+  <h2 class="place-name">{place}</h2>
+  {tagline && <p class="tagline">{tagline}</p>}
+</div>
+
+<style>
+  .section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: var(--sp-44);
+  }
+
+  .rule-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-10);
+  }
+
+  .rule {
+    width: var(--sp-26);
+    height: 2px;
+    background: var(--roquefort);
+  }
+
+  .stop-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--roquefort);
+  }
+
+  .place-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-size: 26px;
+    line-height: 1.08;
+    color: var(--cast-iron);
+    margin: 0;
+  }
+
+  .tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--paprika);
+  }
+</style>

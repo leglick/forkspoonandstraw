@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 · Fork Spoon & Straw" description="Page introuvable." mastheadVariant="default">
+  <section class="not-found">
+    <h1 class="not-found-title">
+      <span class="line-1">404: page</span> <span class="line-2">introuvable</span>
+    </h1>
+    <p class="not-found-copy">
+      Lost in translation? Same. This page is gone, but the rest of the blog is still serving.
+    </p>
+    <a class="btn-solid" href="/">Start from the top <span aria-hidden="true">&rarr;</span></a>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--sp-18);
+    padding: var(--sp-44) var(--gutter-text);
+  }
+
+  .not-found-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-size: 48px;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .line-1 {
+    color: var(--espresso);
+  }
+
+  .line-2 {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--paprika);
+  }
+
+  .not-found-copy {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--cacao);
+    max-width: 46ch;
+  }
+
+  .btn-solid {
+    margin-top: var(--sp-8);
+    height: 50px;
+    padding: 0 24px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 150ms ease-out;
+    background: var(--saumon);
+    color: #3b2a28;
+  }
+
+  .btn-solid:hover {
+    filter: brightness(0.94);
+  }
+
+  @media (min-width: 900px) {
+    .not-found-title {
+      font-size: 64px;
+    }
+  }
+</style>

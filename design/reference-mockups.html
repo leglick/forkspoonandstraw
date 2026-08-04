@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fork spoon and straw — design reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E7D7CF; font-family:'DM Sans',system-ui,sans-serif; color:#2C2825; }
+  a { color:#3E5C6B; text-decoration:none; }
+  a:hover { color:#C2726B; }
+  .wrap { padding:48px 40px 96px; display:flex; flex-direction:column; gap:56px; }
+  .intro { max-width:760px; display:flex; flex-direction:column; gap:12px; }
+  .kicker { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#8C837B; }
+  h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-.035em; font-size:46px; line-height:1.02; margin:0; }
+  .lede { font-family:Newsreader,serif; font-size:19px; line-height:1.6; color:#4A423C; }
+  .row { display:flex; flex-wrap:wrap; gap:44px; align-items:flex-start; }
+  .screen { display:flex; flex-direction:column; gap:14px; }
+  .screen-label { font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8C837B; margin:0; font-weight:400; }
+  .swatches { display:flex; flex-wrap:wrap; gap:12px; }
+  .sw { width:132px; border-radius:12px; overflow:hidden; background:#FDFAF4; border:1px solid rgba(44,40,37,.1); }
+  .sw i { display:block; height:56px; }
+  .sw span { display:block; padding:8px 10px; font-family:'DM Mono',monospace; font-size:11px; line-height:1.5; color:#4A423C; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="intro">
+    <div class="kicker">Design reference &middot; not production code</div>
+    <h1>fork spoon and straw</h1>
+    <p class="lede">Static reference mockups for the personal blog. Type: Bricolage Grotesque (titles), Newsreader (body &amp; italics), DM Sans (pills, meta, buttons). Striped blocks are photo slots. Implementation notes live in <strong>astro-build-notes.md</strong>.</p>
+  </div>
+
+  <div class="swatches">
+    <div class="sw"><i style="background:#F3E5DD"></i><span>#F3E5DD<br>Peach Melba</span></div>
+    <div class="sw"><i style="background:#FDFAF4"></i><span>#FDFAF4<br>Crème</span></div>
+    <div class="sw"><i style="background:#2E4552"></i><span>#2E4552<br>Cast Iron</span></div>
+    <div class="sw"><i style="background:#5B7D8F"></i><span>#5B7D8F<br>Roquefort</span></div>
+    <div class="sw"><i style="background:#3E5C6B"></i><span>#3E5C6B<br>Roquefort Ink</span></div>
+    <div class="sw"><i style="background:#A9C4CE"></i><span>#A9C4CE<br>Sea Salt</span></div>
+    <div class="sw"><i style="background:#E0908A"></i><span>#E0908A<br>Saumon</span></div>
+    <div class="sw"><i style="background:#C2726B"></i><span>#C2726B<br>Paprika</span></div>
+    <div class="sw"><i style="background:#F5C7BF"></i><span>#F5C7BF<br>Rosé</span></div>
+    <div class="sw"><i style="background:#2C2825"></i><span>#2C2825<br>Espresso</span></div>
+    <div class="sw"><i style="background:#8C837B"></i><span>#8C837B<br>Truffle Gray</span></div>
+  </div>
+
+  <div class="row">
+    <section class="screen" id="home-mobile"><h2 class="screen-label">Home — 375px</h2><div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="width:375px; background:#F3E5DD; border-radius:26px; box-shadow:0 18px 44px rgba(44,40,37,.16); overflow:hidden; font-family:'DM Sans', sans-serif;">
+
+        <div style="background:#2E4552; padding:16px 18px 26px; display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="width:30px; height:30px; border-radius:99px; background:#5B7D8F; display:flex; align-items:center; justify-content:center; color:#F7F1E6; font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:15px;">f</div>
+            <div style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:#F7F1E6; font-size:20px;">&#9776;</div>
+          </div>
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:38px; line-height:.98; letter-spacing:-.035em; color:#FDFAF4;">fork spoon<br>and straw<span style="color:#E0908A;">.</span></div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:19px; line-height:1.35; color:rgba(253,250,244,.82);">eating my way around the world, one plate at a time</div>
+        </div>
+
+        <div style="margin:-14px 14px 0; border-radius:20px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 6px 18px rgba(44,40,37,.07); padding:20px; display:flex; flex-direction:column; gap:13px;">
+          <div style="display:flex; gap:14px; align-items:center;">
+            <div style="width:74px; height:74px; flex:none; border-radius:99px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px); border:2px solid #5B7D8F;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px;">
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:23px; line-height:1.12; color:#2C2825;">Bonjour, c&rsquo;est <span style="font-family:Newsreader, serif; font-style:italic; font-weight:400; letter-spacing:0; color:#C2726B;">lele</span>.</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#5B7D8F;">American in Toulouse</span>
+            </div>
+          </div>
+          <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.62; color:#3D3833; text-wrap:pretty;">I came for a job and stayed for the Sunday market. This is where I keep the tables, the recipes and the trips &mdash; the <em style="color:#C2726B;">pépites</em> I&rsquo;d tell you about across the table, two glasses of Lambrusco in.</div>
+          <div style="display:flex; align-items:center; gap:7px; font-size:13px; font-weight:700; color:#3E5C6B;">more about me <span>&rarr;</span></div>
+        </div>
+
+        <div style="padding:20px 14px 22px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div style="border-radius:16px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #5B7D8F; padding:14px; display:flex; flex-direction:column; gap:3px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:19px; color:#2C2825;">Food</span>
+            <span style="font-size:11px; color:#8C837B;">recipes &amp; markets</span>
+          </div>
+          <div style="border-radius:16px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #5B7D8F; padding:14px; display:flex; flex-direction:column; gap:3px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:19px; color:#2C2825;">Travel</span>
+            <span style="font-size:11px; color:#8C837B;">where I&rsquo;ve been</span>
+          </div>
+          <div style="border-radius:16px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #E0908A; padding:14px; display:flex; flex-direction:column; gap:3px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:18px; line-height:1.12; color:#2C2825;">Touloused &amp; Confused</span>
+            <span style="font-size:11px; color:#8C837B;">my city, my tables</span>
+          </div>
+          <div style="border-radius:16px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #E0908A; padding:14px; display:flex; flex-direction:column; gap:3px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:18px; line-height:1.12; color:#2C2825;">Pardon My Franglais</span>
+            <span style="font-size:11px; color:#8C837B;">expat things</span>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px; padding:0 20px 14px;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#5B7D8F;">Latest</span>
+          <div style="flex:1; height:1px; background:rgba(91,125,143,.35);"></div>
+          <span style="font-size:11px; color:#8C837B;">12 juillet</span>
+        </div>
+
+        <div style="padding:0 14px 18px;">
+          <div style="border-radius:20px; overflow:hidden; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09);">
+            <div style="height:340px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+            <div style="padding:18px; display:flex; flex-direction:column; gap:10px;">
+              <span style="align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:#5B7D8F; color:#FDFAF4; padding:6px 11px; border-radius:99px;">Travel</span>
+              <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.03em; font-size:32px; line-height:1.02; color:#22201D; text-wrap:pretty;">Pines, Popovers &amp; Park Loops</div>
+              <div style="font-family:Newsreader, serif; font-style:italic; font-size:18px; color:#6B635C;">3 days in Acadia. Also, lobster.</div>
+              <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.62; color:#3D3833; text-wrap:pretty;">Some trips are about the food. This one was about the air &mdash; the kind that makes you take a stupidly deep breath and think &ldquo;wow, I should really go outside more.&rdquo;</div>
+              <div style="display:flex; align-items:center; gap:7px; font-size:13px; font-weight:700; color:#3E5C6B;">read it <span>&rarr;</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:0 14px 18px; display:grid; grid-template-columns:1fr 1fr; gap:12px; align-items:start;">
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); overflow:hidden;">
+            <div style="height:170px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+            <div style="padding:14px; display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Touloused &amp; Confused</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:19px; line-height:1.1; color:#2C2825;">The six tables that made my year</span>
+              <span style="font-size:11px; color:#8C837B;">9 min &middot; 28.06</span>
+            </div>
+          </div>
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); overflow:hidden; margin-top:26px;">
+            <div style="height:130px; background:repeating-linear-gradient(122deg,#D9CEBE 0 10px,#E6DDD0 10px 20px);"></div>
+            <div style="padding:14px; display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Food</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:19px; line-height:1.1; color:#2C2825;">The Lambrusco braise I make when I&rsquo;m homesick</span>
+              <span style="font-size:11px; color:#8C837B;">6 min &middot; 14.06</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin:4px 14px 22px; border-radius:20px; background:#5B7D8F; padding:22px 20px; display:flex; flex-direction:column; gap:9px;">
+          <span style="font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#F5C7BF;">Pardon My Franglais</span>
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:26px; line-height:1.06; color:#FDFAF4;">How to order a coffee in France without panicking</div>
+          <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.55; color:rgba(253,250,244,.84);">A field guide to the <em style="color:#F5C7BF;">petit noir</em>, the <em style="color:#F5C7BF;">noisette</em>, and why nobody will bring you a to-go cup.</div>
+        </div>
+
+        <div style="padding:0 20px 26px;">
+          <div style="height:50px; border-radius:99px; border:1.5px solid #5B7D8F; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#3E5C6B;">all 38 entries</div>
+        </div>
+
+        <div style="background:#2E4552; padding:28px 20px; display:flex; flex-direction:column; gap:11px;">
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:26px; line-height:1.25; color:#FDFAF4;">Come eat with me, monthly.</div>
+          <div style="font-family:Newsreader, serif; font-size:16px; line-height:1.55; color:rgba(253,250,244,.78);">Where I&rsquo;ve eaten, what I burnt, and the one place you have to try next time you&rsquo;re here.</div>
+          <div style="display:flex; gap:8px; margin-top:4px;">
+            <div style="flex:1; height:48px; border-radius:99px; background:rgba(253,250,244,.12); border:1px solid rgba(253,250,244,.3); display:flex; align-items:center; padding:0 16px; font-size:14px; color:rgba(253,250,244,.6);">your email</div>
+            <div style="height:48px; padding:0 20px; border-radius:99px; background:#E0908A; display:flex; align-items:center; font-weight:700; font-size:14px; color:#3B2A28;">Send it</div>
+          </div>
+        </div>
+
+        <div style="padding:20px; display:flex; justify-content:space-between; font-size:12px; color:#8C837B;">
+          <span>&copy; 2026 &middot; Toulouse</span>
+          <span style="font-family:Newsreader, serif; font-style:italic; font-size:15px; color:#C2726B;">xx lele</span>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <section class="screen" id="post"><h2 class="screen-label">Post — 375px</h2><div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="width:375px; background:#F3E5DD; border-radius:26px; box-shadow:0 18px 44px rgba(44,40,37,.16); overflow:hidden; font-family:'DM Sans', sans-serif;">
+        <div style="background:#2E4552; display:flex; align-items:center; justify-content:space-between; padding:14px 18px;">
+          <span style="font-size:13px; font-weight:700; color:#A9C4CE;">&larr; Travel</span>
+          <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:16px; color:#FDFAF4;">fork spoon and straw</span>
+        </div>
+        <div style="height:3px; background:rgba(46,69,82,.2);"><div style="width:38%; height:3px; background:#E0908A;"></div></div>
+
+        <div style="background:#FDFAF4; padding:24px 22px 18px; display:flex; flex-direction:column; gap:12px;">
+          <span style="align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:#5B7D8F; color:#FDFAF4; padding:6px 11px; border-radius:99px;">Travel</span>
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.035em; font-size:36px; line-height:.99; color:#22201D; text-wrap:pretty;">Pines, Popovers &amp; Park Loops</div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:20px; line-height:1.32; color:#3E5C6B;">3 Days in Acadia</div>
+          <div style="display:flex; gap:10px; align-items:center; font-size:12px; color:#8C837B;">
+            <span>12 juillet 2026</span><span style="width:4px; height:4px; border-radius:99px; background:#5B7D8F;"></span><span>7 min read</span>
+          </div>
+        </div>
+
+        <div style="height:300px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+
+        <div style="background:#FDFAF4; padding:26px 22px 6px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;"><span style="float:left; font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:62px; line-height:.82; padding:6px 10px 0 0; color:#5B7D8F;">S</span>ome trips are about the food. This one was about the air. The kind of crisp, piney, salty-off-the-ocean air that makes you take a stupidly deep breath and think &ldquo;Wow, I should really go outside more.&rdquo;</div>
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;">We spent three days hiking, camping, and generally pretending to be the outdoorsy people we wish we were full-time (thanks 9-5 jobs!). Acadia delivered in every way &mdash; golden light on granite, and the kind of quiet that makes your phone feel irrelevant. (I still took 400 photos. Obviously.)</div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:22px 22px 10px; display:flex; flex-direction:column; gap:5px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:26px; height:2px; background:#5B7D8F;"></div>
+            <span style="font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#5B7D8F;">Stop one</span>
+          </div>
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:26px; line-height:1.08; color:#2E4552;">Jordan Pond</div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:17px; color:#C2726B;">popovers, and the world&rsquo;s most photogenic lawn</div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:12px 0 8px;">
+          <div style="display:flex; gap:9px; padding:0 0 0 22px; overflow:hidden;">
+            <div style="width:170px; height:212px; flex:none; border-radius:14px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+            <div style="width:170px; height:212px; flex:none; border-radius:14px; background:repeating-linear-gradient(122deg,#D9CEBE 0 10px,#E6DDD0 10px 20px);"></div>
+            <div style="width:170px; height:212px; flex:none; border-radius:14px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+          </div>
+          <div style="padding:12px 22px 0; display:flex; align-items:center; gap:10px;">
+            <span style="font-family:'DM Mono', monospace; font-size:10px; color:#5B7D8F;">swipe &mdash; 6 photos</span>
+            <div style="flex:1; height:2px; background:rgba(91,125,143,.22);"><div style="width:34%; height:2px; background:#5B7D8F;"></div></div>
+          </div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:20px 22px 22px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;">The popovers are the point. I know, I know &mdash; you drove into a national park for hot buttered air. But these are the real <em style="color:#C2726B;">pépites</em>: golden, hollow, faintly eggy, served with strawberry jam on a lawn that looks photoshopped.</div>
+        </div>
+
+        <div style="background:#5B7D8F; padding:26px 22px; display:flex; flex-direction:column; gap:8px;">
+          <span style="font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#F5C7BF;">If you only do one thing</span>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:24px; line-height:1.35; color:#FDFAF4;">Park Loop Road at sunrise, popovers straight after. Non-negotiable.</div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:24px 22px 8px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;">Also there was lobster. There&rsquo;s always lobster. (And let&rsquo;s be honest, I&rsquo;d have gone back for a third roll if the queue hadn&rsquo;t judged me.)</div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:28px; color:#C2726B;">xx lele</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:2px;">
+            <span style="font-size:12px; padding:7px 12px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B;">#maine</span>
+            <span style="font-size:12px; padding:7px 12px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B;">#randonnée</span>
+            <span style="font-size:12px; padding:7px 12px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B;">#lobster</span>
+          </div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:22px; display:flex; flex-direction:column; gap:14px; border-top:1px solid rgba(44,40,37,.1); margin-top:18px;">
+          <span style="font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#5B7D8F;">Read next</span>
+          <div style="display:flex; gap:13px; align-items:center;">
+            <div style="width:78px; height:78px; flex:none; border-radius:14px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+            <div style="display:flex; flex-direction:column; gap:5px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Touloused &amp; Confused</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:20px; line-height:1.1; color:#2C2825;">The six tables that made my year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <section class="screen" id="about"><h2 class="screen-label">About + contact — 375px</h2><div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="width:375px; background:#F3E5DD; border-radius:26px; box-shadow:0 18px 44px rgba(44,40,37,.16); overflow:hidden; font-family:'DM Sans', sans-serif;">
+        <div style="background:#2E4552; display:flex; align-items:center; justify-content:space-between; padding:16px 18px;">
+          <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:16px; color:#FDFAF4;">fork spoon and straw</span>
+          <span style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:20px; color:#FDFAF4;">&#9776;</span>
+        </div>
+
+        <div style="background:#FDFAF4; padding:22px 20px 24px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:800; letter-spacing:-.035em; font-size:40px; line-height:.98; color:#22201D;">Bonjour,<br>c&rsquo;est <span style="font-family:Newsreader, serif; font-style:italic; font-weight:400; letter-spacing:0; color:#C2726B;">lele</span>.</div>
+          <div style="height:330px; border-radius:20px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px);"></div>
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;">American, in Toulouse. I came for a job and stayed for the Sunday market. This is where I keep the places, the recipes and the trips &mdash; the <em style="color:#C2726B;">pépites</em> I&rsquo;d tell you about across the table, two glasses of Lambrusco in.</div>
+          <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.68; color:#332F2B; text-wrap:pretty;">No rankings, no sponsored plates, no definitive guides. If I write about a place, it&rsquo;s because I want you to go.</div>
+        </div>
+
+        <div style="background:#FDFAF4; padding:0 20px 24px; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-top:1px solid rgba(91,125,143,.3); font-size:15px; color:#3D3833;"><span>Currently in</span><span style="font-family:Newsreader, serif; font-style:italic; color:#3E5C6B;">Toulouse, FR</span></div>
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-top:1px solid rgba(91,125,143,.3); font-size:15px; color:#3D3833;"><span>Last meal worth it</span><span style="font-family:Newsreader, serif; font-style:italic; color:#3E5C6B;">a popover, Acadia</span></div>
+          <div style="display:flex; justify-content:space-between; padding:14px 0; border-top:1px solid rgba(91,125,143,.3); border-bottom:1px solid rgba(91,125,143,.3); font-size:15px; color:#3D3833;"><span>Always ordering</span><span style="font-family:Newsreader, serif; font-style:italic; color:#3E5C6B;">the second glass</span></div>
+        </div>
+
+        <div style="padding:20px 14px 22px;">
+          <div style="border-radius:20px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #E0908A; padding:20px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#C2726B;">Start here</span>
+            <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:22px; line-height:1.1; color:#2C2825;">Three posts that explain the whole thing</div>
+            <div style="display:flex; flex-direction:column; gap:9px; padding-top:4px;">
+              <span style="font-family:Newsreader, serif; font-size:18px; color:#3E5C6B;">1 &nbsp;Touloused &amp; Confused</span>
+              <span style="font-family:Newsreader, serif; font-size:18px; color:#3E5C6B;">2 &nbsp;Ordering coffee without panicking</span>
+              <span style="font-family:Newsreader, serif; font-size:18px; color:#3E5C6B;">3 &nbsp;Tour de Fork</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#2E4552; padding:30px 20px; display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#A9C4CE;">Say hello</span>
+            <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.03em; font-size:32px; line-height:1.0; color:#FDFAF4;">Tell me where to eat next</div>
+            <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.6; color:rgba(253,250,244,.8); text-wrap:pretty;">Recommendations, questions, or &ldquo;I&rsquo;m coming to Toulouse in October, where do I go?&rdquo; &mdash; all very welcome. I answer everything, eventually.</div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:8px;">
+              <div style="flex:1; height:46px; border-radius:12px; background:rgba(253,250,244,.1); border:1px solid rgba(253,250,244,.28); display:flex; align-items:center; padding:0 14px; font-size:14px; color:rgba(253,250,244,.55);">your name</div>
+              <div style="flex:1; height:46px; border-radius:12px; background:rgba(253,250,244,.1); border:1px solid rgba(253,250,244,.28); display:flex; align-items:center; padding:0 14px; font-size:14px; color:rgba(253,250,244,.55);">your email</div>
+            </div>
+            <div style="height:110px; border-radius:12px; background:rgba(253,250,244,.1); border:1px solid rgba(253,250,244,.28); padding:13px 14px; font-size:14px; color:rgba(253,250,244,.55);">what&rsquo;s on your mind?</div>
+            <div style="height:50px; border-radius:99px; background:#E0908A; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; color:#3B2A28;">Send it my way</div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:10px; padding-top:4px;">
+            <div style="flex:1; height:1px; background:rgba(253,250,244,.2);"></div>
+            <span style="font-size:11px; color:rgba(253,250,244,.55);">or find me</span>
+            <div style="flex:1; height:1px; background:rgba(253,250,244,.2);"></div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <div style="flex:1; height:44px; border-radius:99px; border:1px solid rgba(253,250,244,.3); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#FDFAF4;">Instagram</div>
+            <div style="flex:1; height:44px; border-radius:99px; border:1px solid rgba(253,250,244,.3); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#FDFAF4;">Email</div>
+          </div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:20px; color:#F5C7BF;">xx lele</div>
+        </div>
+      </div>
+    </div>
+</section>
+    <section class="screen" id="archive"><h2 class="screen-label">Category archive — 375px</h2><div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="width:375px; background:#F3E5DD; border-radius:26px; box-shadow:0 18px 44px rgba(44,40,37,.16); overflow:hidden; font-family:'DM Sans', sans-serif;">
+
+        <div style="background:#2E4552; padding:16px 18px 26px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:16px; color:#FDFAF4;">fork spoon and straw</span>
+            <span style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:20px; color:#FDFAF4;">&#9776;</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:26px; height:2px; background:#A9C4CE;"></div>
+            <span style="font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#A9C4CE;">Catégorie</span>
+          </div>
+          <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:800; letter-spacing:-.035em; font-size:38px; line-height:.98; color:#FDFAF4;">Touloused<br>&amp; Confused</div>
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:18px; line-height:1.4; color:rgba(253,250,244,.82); text-wrap:pretty;">Tables I&rsquo;d send you to without hesitating &mdash; and the ones I go back to alone, on a Tuesday.</div>
+          <div style="font-size:12px; color:rgba(253,250,244,.55);">14 entries</div>
+        </div>
+
+        <div style="display:flex; gap:8px; padding:18px 18px 16px; overflow:hidden;">
+          <span style="font-size:12px; font-weight:700; padding:9px 14px; border-radius:99px; background:#5B7D8F; color:#FDFAF4; white-space:nowrap;">All</span>
+          <span style="font-size:12px; font-weight:600; padding:9px 14px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B; white-space:nowrap;">Terrasses</span>
+          <span style="font-size:12px; font-weight:600; padding:9px 14px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B; white-space:nowrap;">Sous 20&euro;</span>
+          <span style="font-size:12px; font-weight:600; padding:9px 14px; border-radius:99px; border:1px solid rgba(91,125,143,.45); color:#3E5C6B; white-space:nowrap;">Vin</span>
+        </div>
+
+        <div style="padding:0 14px 18px;">
+          <div style="border-radius:20px; overflow:hidden; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09);">
+            <div style="height:230px; background:repeating-linear-gradient(122deg,#E4D3C8 0 10px,#EFE2D8 10px 20px);"></div>
+            <div style="padding:18px; display:flex; flex-direction:column; gap:9px;">
+              <span style="align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:#E0908A; color:#3B2A28; padding:6px 11px; border-radius:99px;">Coup de coeur</span>
+              <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.03em; font-size:28px; line-height:1.02; color:#22201D; text-wrap:pretty;">The cassoulet that ruined me for all others</div>
+              <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.6; color:#3D3833;">(and let&rsquo;s be honest, I&rsquo;m not sorry)</div>
+              <div style="font-size:11px; color:#8C837B;">11.05 &middot; 7 min</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px; padding:4px 20px 14px;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#5B7D8F;">Everything else</span>
+          <div style="flex:1; height:1px; background:rgba(91,125,143,.3);"></div>
+        </div>
+
+        <div style="padding:0 14px 22px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; gap:14px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-radius:18px; padding:12px;">
+            <div style="width:100px; height:126px; flex:none; border-radius:12px; background:repeating-linear-gradient(122deg,#E4D3C8 0 10px,#EFE2D8 10px 20px);"></div>
+            <div style="display:flex; flex-direction:column; gap:6px; padding-top:2px;">
+              <span style="font-size:11px; color:#8C837B;">28.06 &middot; 9 min</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:20px; line-height:1.08; color:#2C2825;">The six tables that made my year</span>
+              <span style="font-family:Newsreader, serif; font-size:15px; line-height:1.5; color:#6B635C;">Including one I&rsquo;d fight a stranger for a seat at.</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:14px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-radius:18px; padding:12px;">
+            <div style="width:100px; height:126px; flex:none; border-radius:12px; background:repeating-linear-gradient(122deg,#DFCDC1 0 10px,#EADCD2 10px 20px);"></div>
+            <div style="display:flex; flex-direction:column; gap:6px; padding-top:2px;">
+              <span style="font-size:11px; color:#8C837B;">02.04 &middot; 5 min</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:20px; line-height:1.08; color:#2C2825;">A terrasse, a pichet, and zero plans</span>
+              <span style="font-family:Newsreader, serif; font-size:15px; line-height:1.5; color:#6B635C;">The Sunday blueprint. Copy it freely.</span>
+            </div>
+          </div>
+          <div style="display:flex; gap:14px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-radius:18px; padding:12px;">
+            <div style="width:100px; height:126px; flex:none; border-radius:12px; background:repeating-linear-gradient(122deg,#E4D3C8 0 10px,#EFE2D8 10px 20px);"></div>
+            <div style="display:flex; flex-direction:column; gap:6px; padding-top:2px;">
+              <span style="font-size:11px; color:#8C837B;">17.03 &middot; 6 min</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:20px; line-height:1.08; color:#2C2825;">Where to eat when your parents visit</span>
+              <span style="font-family:Newsreader, serif; font-size:15px; line-height:1.5; color:#6B635C;">Tested. Approved. Survived.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:0 20px 28px;">
+          <div style="height:50px; border-radius:99px; border:1.5px solid #5B7D8F; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:#3E5C6B;">load 11 more</div>
+        </div>
+
+        <div style="background:#2E4552; padding:28px 20px; display:flex; flex-direction:column; gap:11px;">
+          <div style="font-family:Newsreader, serif; font-style:italic; font-size:25px; line-height:1.25; color:#FDFAF4;">Come eat with me, monthly.</div>
+          <div style="display:flex; gap:8px; margin-top:2px;">
+            <div style="flex:1; height:48px; border-radius:99px; background:rgba(253,250,244,.12); border:1px solid rgba(253,250,244,.3); display:flex; align-items:center; padding:0 16px; font-size:14px; color:rgba(253,250,244,.6);">your email</div>
+            <div style="height:48px; padding:0 20px; border-radius:99px; background:#E0908A; display:flex; align-items:center; font-weight:700; font-size:14px; color:#3B2A28;">Send it</div>
+          </div>
+        </div>
+
+        <div style="padding:20px; display:flex; justify-content:space-between; font-size:12px; color:#8C837B;">
+          <span>&copy; 2026 &middot; Toulouse</span>
+          <span style="font-family:Newsreader, serif; font-style:italic; font-size:15px; color:#C2726B;">xx lele</span>
+        </div>
+      </div>
+    </div>
+
+    </section>
+  </div>
+  <div class="row">
+    <section class="screen" id="home-desktop"><h2 class="screen-label">Home — 1280px</h2><div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="width:1280px; background:#F3E5DD; border-radius:20px; box-shadow:0 18px 44px rgba(44,40,37,.16); overflow:hidden; font-family:'DM Sans', sans-serif;">
+
+        <div style="background:#2E4552; padding:0 48px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:22px 0;">
+            <div style="display:flex; align-items:center; gap:11px;">
+              <div style="width:34px; height:34px; border-radius:99px; background:#5B7D8F; display:flex; align-items:center; justify-content:center; color:#FDFAF4; font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:15px;">f</div>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:19px; color:#FDFAF4;">fork spoon and straw</span>
+            </div>
+            <div style="display:flex; gap:28px; font-size:14px; font-weight:600; color:rgba(253,250,244,.85);">
+              <span>Food</span><span>Travel</span><span>Pardon My Franglais</span><span>Touloused &amp; Confused</span><span>About</span><span style="color:#F5C7BF;">Contact</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#2E4552; padding:14px 48px 76px; display:grid; grid-template-columns:1.25fr .9fr; gap:56px; align-items:center;">
+          <div style="display:flex; flex-direction:column; gap:18px;">
+            <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:800; letter-spacing:-.04em; font-size:74px; line-height:.94; color:#FDFAF4;">Bonjour, c&rsquo;est <span style="font-family:Newsreader, serif; font-style:italic; font-weight:400; letter-spacing:0; color:#F5C7BF;">lele</span>.</div>
+            <div style="font-family:Newsreader, serif; font-style:italic; font-size:24px; line-height:1.4; color:rgba(253,250,244,.85); max-width:600px;">eating my way around the world, one plate at a time &mdash; currently from a terrasse in Toulouse.</div>
+            <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.66; color:rgba(253,250,244,.72); max-width:620px; text-wrap:pretty;">I came for a job and stayed for the Sunday market. This is where I keep the tables, the recipes and the trips &mdash; the <em style="color:#F5C7BF;">pépites</em> I&rsquo;d tell you about across the table, two glasses of Lambrusco in. No rankings, no sponsored plates. If I write about a place, it&rsquo;s because I want you to go.</div>
+            <div style="display:flex; gap:12px; padding-top:4px;">
+              <div style="height:50px; padding:0 24px; border-radius:99px; background:#E0908A; display:flex; align-items:center; font-size:14px; font-weight:700; color:#3B2A28;">Start here</div>
+              <div style="height:50px; padding:0 24px; border-radius:99px; border:1.5px solid rgba(253,250,244,.35); display:flex; align-items:center; font-size:14px; font-weight:700; color:#FDFAF4;">More about me</div>
+            </div>
+          </div>
+          <div style="height:430px; border-radius:24px; background:repeating-linear-gradient(122deg,#DED2C2 0 10px,#EAE1D3 10px 20px); border:1px solid rgba(253,250,244,.18);"></div>
+        </div>
+
+        <div style="margin:-52px 48px 0; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #5B7D8F; box-shadow:0 8px 22px rgba(44,40,37,.09); padding:20px; display:flex; flex-direction:column; gap:5px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:24px; color:#2C2825;">Food</span>
+            <span style="font-family:Newsreader, serif; font-size:15px; color:#8C837B;">recipes, markets, the braise</span>
+          </div>
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #5B7D8F; box-shadow:0 8px 22px rgba(44,40,37,.09); padding:20px; display:flex; flex-direction:column; gap:5px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:24px; color:#2C2825;">Travel</span>
+            <span style="font-family:Newsreader, serif; font-size:15px; color:#8C837B;">where I&rsquo;ve been, and why</span>
+          </div>
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #E0908A; box-shadow:0 8px 22px rgba(44,40,37,.09); padding:20px; display:flex; flex-direction:column; gap:5px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:23px; line-height:1.1; color:#2C2825;">Touloused &amp; Confused</span>
+            <span style="font-family:Newsreader, serif; font-size:15px; color:#8C837B;">my city, my tables</span>
+          </div>
+          <div style="border-radius:18px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); border-left:3px solid #E0908A; box-shadow:0 8px 22px rgba(44,40,37,.09); padding:20px; display:flex; flex-direction:column; gap:5px;">
+            <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:23px; line-height:1.1; color:#2C2825;">Pardon My Franglais</span>
+            <span style="font-family:Newsreader, serif; font-size:15px; color:#8C837B;">expat things, in two languages</span>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:16px; padding:44px 48px 20px;">
+          <span style="font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#5B7D8F;">Latest</span>
+          <div style="flex:1; height:1px; background:rgba(91,125,143,.3);"></div>
+          <span style="font-size:12px; color:#8C837B;">12 juillet</span>
+        </div>
+
+        <div style="padding:0 48px 40px;">
+          <div style="border-radius:24px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09); overflow:hidden; display:grid; grid-template-columns:1.15fr 1fr; align-items:stretch;">
+            <div style="min-height:470px; background:repeating-linear-gradient(122deg,#E4D3C8 0 10px,#EFE2D8 10px 20px);"></div>
+            <div style="padding:44px 44px 44px 40px; display:flex; flex-direction:column; gap:15px; justify-content:center;">
+              <span style="align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; background:#5B7D8F; color:#FDFAF4; padding:6px 12px; border-radius:99px;">Travel</span>
+              <div style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.04em; font-size:52px; line-height:.98; color:#22201D; text-wrap:pretty;">Pines, Popovers &amp; Park Loops</div>
+              <div style="font-family:Newsreader, serif; font-style:italic; font-size:22px; color:#3E5C6B;">3 days in Acadia. Also, lobster.</div>
+              <div style="font-family:Newsreader, serif; font-size:19px; line-height:1.66; color:#3D3833; text-wrap:pretty;">Some trips are about the food. This one was about the air &mdash; the kind of crisp, piney, salty-off-the-ocean air that makes you take a stupidly deep breath and think &ldquo;wow, I should really go outside more.&rdquo;</div>
+              <div style="font-size:14px; font-weight:700; color:#3E5C6B;">read it &rarr;</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px; padding:0 48px 24px; align-items:start;">
+          <div style="border-radius:20px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09); overflow:hidden;">
+            <div style="height:280px; background:repeating-linear-gradient(122deg,#DFCDC1 0 10px,#EADCD2 10px 20px);"></div>
+            <div style="padding:20px; display:flex; flex-direction:column; gap:8px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Touloused &amp; Confused</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:26px; line-height:1.06; color:#2C2825;">The six tables that made my year</span>
+              <span style="font-family:Newsreader, serif; font-size:16px; line-height:1.55; color:#6B635C;">Including one I&rsquo;d fight a stranger for a seat at.</span>
+              <span style="font-size:11px; color:#8C837B;">9 min &middot; 28.06</span>
+            </div>
+          </div>
+          <div style="border-radius:20px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09); overflow:hidden; margin-top:52px;">
+            <div style="height:214px; background:repeating-linear-gradient(122deg,#E4D3C8 0 10px,#EFE2D8 10px 20px);"></div>
+            <div style="padding:20px; display:flex; flex-direction:column; gap:8px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Food</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:26px; line-height:1.06; color:#2C2825;">The Lambrusco braise I make when I&rsquo;m homesick</span>
+              <span style="font-family:Newsreader, serif; font-size:16px; line-height:1.55; color:#6B635C;">Two hours, one pot, zero finesse required.</span>
+              <span style="font-size:11px; color:#8C837B;">6 min &middot; 14.06</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:20px; margin-top:14px;">
+            <div style="border-radius:20px; background:#5B7D8F; padding:26px 24px; display:flex; flex-direction:column; gap:9px;">
+              <span style="font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#F5C7BF;">Pardon My Franglais</span>
+              <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.025em; font-size:27px; line-height:1.06; color:#FDFAF4;">How to order a coffee in France without panicking</span>
+              <span style="font-family:Newsreader, serif; font-size:16px; line-height:1.55; color:rgba(253,250,244,.84);">A field guide to the <em style="color:#F5C7BF;">petit noir</em>, the <em style="color:#F5C7BF;">noisette</em>, and why nobody will bring you a to-go cup.</span>
+            </div>
+            <div style="border-radius:20px; background:#FDFAF4; border:1px solid rgba(44,40,37,.09); box-shadow:0 8px 22px rgba(44,40,37,.09); overflow:hidden;">
+              <div style="height:170px; background:repeating-linear-gradient(122deg,#DFCDC1 0 10px,#EADCD2 10px 20px);"></div>
+              <div style="padding:18px; display:flex; flex-direction:column; gap:7px;">
+                <span style="font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#C2726B;">Travel</span>
+                <span style="font-family:'Bricolage Grotesque', sans-serif; font-weight:700; letter-spacing:-.02em; font-size:23px; line-height:1.08; color:#2C2825;">Tour de Fork: nine days, one bike, far too much cheese</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:20px 48px 44px; display:flex; justify-content:center;">
+          <div style="height:52px; padding:0 34px; border-radius:99px; border:1.5px solid #5B7D8F; display:flex; align-items:center; font-size:13px; font-weight:700; color:#3E5C6B;">all 38 entries</div>
+        </div>
+
+        <div style="background:#2E4552; padding:52px 48px; display:flex; align-items:center; justify-content:space-between; gap:40px;">
+          <div style="display:flex; flex-direction:column; gap:8px; max-width:540px;">
+            <div style="font-family:Newsreader, serif; font-style:italic; font-size:34px; line-height:1.2; color:#FDFAF4;">Come eat with me, monthly.</div>
+            <div style="font-family:Newsreader, serif; font-size:17px; line-height:1.6; color:rgba(253,250,244,.78);">Where I&rsquo;ve eaten, what I burnt, and the one place you have to try next time you&rsquo;re here.</div>
+          </div>
+          <div style="display:flex; gap:10px; flex:none;">
+            <div style="width:280px; height:52px; border-radius:99px; background:rgba(253,250,244,.12); border:1px solid rgba(253,250,244,.3); display:flex; align-items:center; padding:0 18px; font-size:15px; color:rgba(253,250,244,.6);">your email</div>
+            <div style="height:52px; padding:0 24px; border-radius:99px; background:#E0908A; display:flex; align-items:center; font-weight:700; font-size:15px; color:#3B2A28;">Send it</div>
+          </div>
+        </div>
+
+        <div style="padding:24px 48px 32px; display:flex; justify-content:space-between; font-size:13px; color:#8C837B;">
+          <span>&copy; 2026 fork spoon and straw &middot; Toulouse</span>
+          <span style="font-family:Newsreader, serif; font-style:italic; font-size:16px; color:#C2726B;">xx lele</span>
+        </div>
+      </div>
+    </div>
+</section>
+  </div>
+</div>
+</body>
+</html>

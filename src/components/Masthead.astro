@@ -1,0 +1,416 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../logo.png';
+import { CATEGORIES } from '../lib/categories';
+
+interface Props {
+  variant?: 'home' | 'default' | 'post';
+  tagline?: string;
+  back?: { label: string; href: string };
+  sticky?: boolean;
+}
+
+const {
+  variant = 'default',
+  tagline = 'places, plates & the occasional pun',
+  back,
+  sticky = false,
+} = Astro.props;
+
+const hasHamburger = variant !== 'post';
+---
+
+<header class="masthead" class:list={{ 'is-sticky': sticky }}>
+  <div class="desktop-nav">
+    <a class="brand" href="/">
+      <Image class="avatar" src={logo} alt="" width={68} height={68} />
+      <span class="wordmark-sm">fork spoon and straw</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        {
+          CATEGORIES.map((c) => (
+            <li>
+              <a href={`/${c.slug}`}>{c.label}</a>
+            </li>
+          ))
+        }
+        <li><a href="/about">About</a></li>
+        <li><a class="contact-link" href="/about#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  {
+    variant === 'post' ? (
+      <div class="mobile-row post-row">
+        <a class="back-link" href={back?.href ?? '/'}>
+          &larr; {back?.label ?? 'Home'}
+        </a>
+        <a class="brand" href="/">
+          <Image class="avatar" src={logo} alt="" width={56} height={56} />
+          <span class="wordmark-sm">fork spoon and straw</span>
+        </a>
+      </div>
+    ) : variant === 'home' ? (
+      <div class="mobile-home">
+        <div class="mobile-row">
+          <Image class="avatar" src={logo} alt="" width={60} height={60} />
+          <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-panel" type="button">
+            &#9776;
+          </button>
+        </div>
+        <div class="wordmark-lg">
+          fork spoon
+          <br />
+          and straw<span class="period">.</span>
+        </div>
+        <p class="tagline">{tagline}</p>
+      </div>
+    ) : (
+      <div class="mobile-row default-row">
+        <a class="brand" href="/">
+          <Image class="avatar" src={logo} alt="" width={56} height={56} />
+          <span class="wordmark-sm">fork spoon and straw</span>
+        </a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-panel" type="button">
+          &#9776;
+        </button>
+      </div>
+    )
+  }
+
+  {
+    sticky && (
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-bar" id="reading-progress" />
+      </div>
+    )
+  }
+</header>
+
+{
+  hasHamburger && (
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden />
+  )
+}
+{
+  hasHamburger && (
+    <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile" hidden>
+      <button class="nav-close" id="mobile-nav-close" aria-label="Close menu" type="button">
+        &times;
+      </button>
+      <ul>
+        {CATEGORIES.map((c) => (
+          <li>
+            <a href={`/${c.slug}`}>{c.label}</a>
+          </li>
+        ))}
+        <li><a href="/about">About</a></li>
+        <li><a class="contact-link" href="/about#contact">Contact</a></li>
+      </ul>
+    </nav>
+  )
+}
+
+<script>
+  // Progressive enhancement only: reading works with this disabled, it just
+  // draws a saumon bar tracking scroll depth on post pages. No-ops harmlessly
+  // on pages without a #reading-progress element.
+  const bar = document.getElementById('reading-progress');
+
+  function updateProgress() {
+    if (!bar) return;
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    bar.style.width = `${pct}%`;
+  }
+
+  if (bar) {
+    document.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  // Mobile nav toggle: CSS handles the slide-in transition, this just flips
+  // `hidden` + an `.is-open` class and keeps aria-expanded in sync.
+  const hamburger = document.querySelector<HTMLButtonElement>('.hamburger');
+  const panel = document.getElementById('mobile-nav-panel');
+  const backdrop = document.getElementById('mobile-nav-backdrop');
+  const closeBtn = document.getElementById('mobile-nav-close');
+
+  function openNav() {
+    if (!panel || !backdrop) return;
+    panel.hidden = false;
+    backdrop.hidden = false;
+    requestAnimationFrame(() => {
+      panel.classList.add('is-open');
+      backdrop.classList.add('is-open');
+    });
+    hamburger?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNav() {
+    if (!panel || !backdrop) return;
+    panel.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      if (!panel.classList.contains('is-open')) {
+        panel.hidden = true;
+        backdrop.hidden = true;
+      }
+    }, 220);
+  }
+
+  hamburger?.addEventListener('click', openNav);
+  closeBtn?.addEventListener('click', closeNav);
+  backdrop?.addEventListener('click', closeNav);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+</script>
+
+<style>
+  .masthead {
+    background: var(--cast-iron);
+    position: relative;
+    z-index: 20;
+  }
+
+  .masthead.is-sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  :global(img.avatar) {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-pill);
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .wordmark-sm {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-size: 16px;
+    color: var(--creme);
+  }
+
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--creme);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .default-row,
+  .post-row {
+    padding: 16px 18px;
+  }
+
+  .back-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sea-salt);
+    text-decoration: none;
+  }
+
+  .mobile-home {
+    padding: 16px 18px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-14);
+  }
+
+  .wordmark-lg {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    color: var(--creme);
+  }
+
+  .wordmark-lg .period {
+    color: var(--saumon);
+  }
+
+  .tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.35;
+    color: rgba(253, 250, 244, 0.82);
+  }
+
+  .progress-track {
+    height: 3px;
+    background: rgba(46, 69, 82, 0.2);
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--saumon);
+  }
+
+  /* ---- Mobile slide-out nav ---- */
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 40, 37, 0.4);
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+  }
+
+  .mobile-nav-backdrop.is-open {
+    opacity: 1;
+  }
+
+  .mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(78vw, 320px);
+    background: var(--cast-iron);
+    z-index: 31;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transform: translateX(100%);
+    transition: transform 220ms ease-out;
+    box-shadow: -8px 0 24px rgba(44, 40, 37, 0.2);
+  }
+
+  .mobile-nav-panel.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-close {
+    align-self: flex-end;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--creme);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: var(--sp-10);
+  }
+
+  .mobile-nav-panel ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-nav-panel a {
+    display: block;
+    padding: 14px 6px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--creme);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(253, 250, 244, 0.12);
+  }
+
+  .mobile-nav-panel a.contact-link {
+    color: var(--rose);
+  }
+
+  /* Desktop nav bar: hidden on mobile, replaces all mobile row variants
+     above 900px (only the sticky post-page progress track still applies). */
+  .desktop-nav {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .mobile-row,
+    .mobile-home,
+    .mobile-nav-panel,
+    .mobile-nav-backdrop {
+      display: none;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 22px var(--gutter-desktop);
+      max-width: 1280px;
+      margin-inline: auto;
+    }
+
+    .desktop-nav .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+    }
+
+    .desktop-nav :global(img.avatar) {
+      width: 34px;
+      height: 34px;
+    }
+
+    .desktop-nav .wordmark-sm {
+      font-size: 19px;
+    }
+
+    .desktop-nav nav ul {
+      display: flex;
+      gap: 28px;
+    }
+
+    .desktop-nav nav a {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 14px;
+      color: rgba(253, 250, 244, 0.85);
+      text-decoration: none;
+    }
+
+    .desktop-nav nav a:hover {
+      color: var(--creme);
+    }
+
+    .desktop-nav nav a.contact-link {
+      color: var(--rose);
+    }
+
+    .desktop-nav nav a.contact-link:hover {
+      color: var(--creme);
+    }
+  }
+</style>

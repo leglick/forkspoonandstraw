@@ -1,0 +1,51 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <span class="copyright">&copy; {year} fork spoon and straw</span>
+  <span class="signoff">xx lele</span>
+</footer>
+
+<style>
+  .footer {
+    background: var(--cast-iron);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-10);
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--truffle);
+  }
+
+  .signoff {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--paprika);
+  }
+
+  @media (min-width: 900px) {
+    .footer {
+      padding: 24px var(--gutter-desktop) 32px;
+    }
+
+    .copyright {
+      font-size: 13px;
+    }
+
+    .brand-desktop {
+      display: inline;
+    }
+
+    .signoff {
+      font-size: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,129 @@
+---
+// Static markup only -- no email provider (Buttondown, ConvertKit, etc.) is
+// wired up yet. The form has no action/handler until one is chosen; see the
+// kickoff brief's "Future upgrades" note.
+---
+
+<section class="newsletter">
+  <div class="newsletter-copy">
+    <p class="newsletter-headline">Come eat with me, monthly.</p>
+    <p class="newsletter-body">
+      Where I&rsquo;ve eaten, what I burnt, and the one place you have to try next time
+      you&rsquo;re here.
+    </p>
+  </div>
+  <form class="newsletter-form">
+    <input class="newsletter-input" type="email" name="email" placeholder="your email" aria-label="Email address" />
+    <button class="newsletter-button" type="submit">Send it</button>
+  </form>
+</section>
+
+<style>
+  .newsletter {
+    background: var(--cast-iron);
+    padding: 28px var(--sp-20);
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .newsletter-headline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.25;
+    color: var(--creme);
+  }
+
+  .newsletter-body {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(253, 250, 244, 0.78);
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: var(--sp-8);
+    margin-top: var(--sp-4);
+  }
+
+  .newsletter-input {
+    flex: 1;
+    height: 48px;
+    border-radius: var(--radius-pill);
+    background: rgba(253, 250, 244, 0.12);
+    border: 1px solid rgba(253, 250, 244, 0.3);
+    padding: 0 16px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--creme);
+  }
+
+  .newsletter-input::placeholder {
+    color: rgba(253, 250, 244, 0.6);
+  }
+
+  .newsletter-button {
+    height: 48px;
+    padding: 0 var(--sp-20);
+    border-radius: var(--radius-pill);
+    background: var(--saumon);
+    border: none;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 14px;
+    color: #3b2a28;
+    cursor: pointer;
+    transition: filter 150ms ease-out;
+  }
+
+  .newsletter-button:hover {
+    filter: brightness(0.94);
+  }
+
+  @media (min-width: 900px) {
+    .newsletter {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 52px var(--gutter-desktop);
+    }
+
+    .newsletter-copy {
+      max-width: 540px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-8);
+    }
+
+    .newsletter-headline {
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .newsletter-body {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      flex: none;
+      gap: var(--sp-10);
+      margin-top: 0;
+    }
+
+    .newsletter-input {
+      width: 280px;
+      height: 52px;
+      font-size: 15px;
+    }
+
+    .newsletter-button {
+      height: 52px;
+      padding: 0 24px;
+      font-size: 15px;
+    }
+  }
+</style>

@@ -1,0 +1,357 @@
+{
+  "startedAt": "2026-08-03T08:23:02.803Z",
+  "dryRun": false,
+  "postsFound": 47,
+  "postsMigrated": 47,
+  "postsFailed": [],
+  "imagesDownloaded": 1758,
+  "imagesFailed": [],
+  "urlMapping": [
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/it-s-all-greek-to-me-part-1",
+      "slug": "it-s-all-greek-to-me-part-1",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/the-visa-struggle-is-real",
+      "slug": "the-visa-struggle-is-real",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/a-summer-life-update",
+      "slug": "a-summer-life-update",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/mumbye-america-hello-india",
+      "slug": "mumbye-america-hello-india",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/let-s-maldives-right-in",
+      "slug": "let-s-maldives-right-in",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/s-love-akia",
+      "slug": "s-love-akia",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/a-colorful-weekend-in-collioure",
+      "slug": "a-colorful-weekend-in-collioure",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/a-great-weekend-getaway-and-i-ain-t-lyon",
+      "slug": "a-great-weekend-getaway-and-i-ain-t-lyon",
+      "categories": [
+        "Pardon My Franglais",
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/pines-popovers-park-loops-3-days-in-acadia",
+      "slug": "pines-popovers-park-loops-3-days-in-acadia",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/tour-de-fork-bike-packing-the-eurovelo-1",
+      "slug": "tour-de-fork-bike-packing-the-eurovelo-1",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/feeling-gold-in-the-golden-triangle",
+      "slug": "feeling-gold-in-the-golden-triangle",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/je-me-souviens-de-poutine-3-5-days-in-montreal",
+      "slug": "je-me-souviens-de-poutine-3-5-days-in-montreal",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/a-tourist-in-my-own-city",
+      "slug": "a-tourist-in-my-own-city",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/the-one-with-italy-the-alps-and-the-fog",
+      "slug": "the-one-with-italy-the-alps-and-the-fog",
+      "categories": [
+        "Pardon My Franglais",
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/it-s-been-a-hot-second-2-years-if-we-re-counting",
+      "slug": "it-s-been-a-hot-second-2-years-if-we-re-counting",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/andiamo-a-cinque-terre",
+      "slug": "andiamo-a-cinque-terre",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/austria-was-a-wiener",
+      "slug": "austria-was-a-wiener",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/pumpkin-spicing-it-up-november-2019",
+      "slug": "pumpkin-spicing-it-up-november-2019",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/des-vacances-sportives",
+      "slug": "des-vacances-sportives",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/vamos-a-madrid",
+      "slug": "vamos-a-madrid",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/touloused-confused-my-coup-de-coeur-restaurants",
+      "slug": "touloused-confused-my-coup-de-coeur-restaurants",
+      "categories": [
+        "Food",
+        "Touloused & Confused"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/add-three-letters-to-paris-and-you-have-paradise",
+      "slug": "add-three-letters-to-paris-and-you-have-paradise",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/ello-and-au-revoir-a-year-s-tapif-recap",
+      "slug": "ello-and-au-revoir-a-year-s-tapif-recap",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/end-of-april-updates",
+      "slug": "end-of-april-updates",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/with-great-powder",
+      "slug": "with-great-powder",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/it-s-going-to-be-a-nice-year",
+      "slug": "it-s-going-to-be-a-nice-year",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/czech-ing-out-prague",
+      "slug": "czech-ing-out-prague",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/marching-around-the-christmas-markets",
+      "slug": "marching-around-the-christmas-markets",
+      "categories": [
+        "Pardon My Franglais",
+        "Food",
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/randos-repos-a-long-weekend-in-the-pyrenées",
+      "slug": "randos-repos-a-long-weekend-in-the-pyrenees",
+      "categories": [
+        "Travel",
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/no-car-ça-roule-how-to-have-a-carbon-neutral-weekend-adventure",
+      "slug": "no-car-ca-roule-how-to-have-a-carbon-neutral-weekend-adventure",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/abroad-blog",
+      "slug": "abroad-blog",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/obrigada-portugal",
+      "slug": "obrigada-portugal",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/orienting-myself",
+      "slug": "orienting-myself",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/budapest-aka-buda-best",
+      "slug": "budapest-aka-buda-best",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/feelin-22-in-france",
+      "slug": "feelin-22-in-france",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/c-est-marseille-bébé",
+      "slug": "c-est-marseille-bebe",
+      "categories": [
+        "Pardon My Franglais",
+        "Travel",
+        "Food"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/it-s-all-greek-to-me-part-2-milos-santorini",
+      "slug": "it-s-all-greek-to-me-part-2-milos-santorini",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/des-voyages-entre-villes",
+      "slug": "des-voyages-entre-villes",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/my-first-month-in-toulouse",
+      "slug": "my-first-month-in-toulouse",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/sleighin-it-december-19",
+      "slug": "sleighin-it-december-19",
+      "categories": [
+        "Pardon My Franglais",
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/beating-the-winter-blues",
+      "slug": "beating-the-winter-blues",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/carnival-craziness",
+      "slug": "carnival-craziness",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/pre-departure-panic",
+      "slug": "pre-departure-panic",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/printemps-à-paris-blessed-in-barcelona",
+      "slug": "printemps-a-paris-blessed-in-barcelona",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/let-s-go-a",
+      "slug": "let-s-go-a",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/around-the-world-in-3-weeks",
+      "slug": "around-the-world-in-3-weeks",
+      "categories": [
+        "Travel"
+      ]
+    },
+    {
+      "wixUrl": "https://www.forkspoonandstraw.com/post/ski-you-later",
+      "slug": "ski-you-later",
+      "categories": [
+        "Pardon My Franglais"
+      ]
+    }
+  ],
+  "discoveryIssues": [],
+  "finishedAt": "2026-08-03T08:23:07.644Z"
+}
