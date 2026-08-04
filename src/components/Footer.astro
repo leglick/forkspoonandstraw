@@ -1,21 +1,115 @@
 ---
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../lib/categories';
+
 const year = new Date().getFullYear();
+const postCount = (await getCollection('posts')).length;
 ---
 
 <footer class="footer">
-  <span class="copyright">&copy; {year} fork spoon and straw</span>
-  <span class="signoff">xx lele</span>
+  <div class="footer-brand">
+    <p class="footer-wordmark">fork spoon<br />and straw<span class="period">.</span></p>
+    <p class="footer-tagline">places, plates &amp; the occasional pun.</p>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-col">
+      <span class="footer-col-label">Read</span>
+      {CATEGORIES.map((c) => <a href={`/${c.slug}`}>{c.label}</a>)}
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-label">Elsewhere</span>
+      <a href="/about">About me</a>
+      <a href="/about#contact">Say hello</a>
+      <a href="https://www.instagram.com/forkspoonandstraw/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="/archive">All {postCount} entries</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="copyright">&copy; {year} fork spoon and straw</span>
+    <span class="signoff">xx lele</span>
+  </div>
 </footer>
 
 <style>
   .footer {
     background: var(--cast-iron);
-    padding: 20px;
+    padding: var(--sp-26) var(--sp-20) var(--sp-20);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-26);
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+  }
+
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-size: 32px;
+    line-height: 1.02;
+    color: var(--creme);
+    margin: 0;
+  }
+
+  .footer-wordmark .period {
+    color: var(--saumon);
+  }
+
+  .footer-tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(253, 250, 244, 0.68);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-20);
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  .footer-col-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sea-salt);
+  }
+
+  .footer-col a {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    color: var(--creme);
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    color: var(--rose);
+  }
+
+  .footer-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--sp-10);
     flex-wrap: wrap;
+    padding-top: var(--sp-18);
+    border-top: 1px solid rgba(253, 250, 244, 0.14);
   }
 
   .copyright {
@@ -33,15 +127,25 @@ const year = new Date().getFullYear();
 
   @media (min-width: 900px) {
     .footer {
-      padding: 24px var(--gutter-desktop) 32px;
+      padding: 44px var(--gutter-desktop) 28px;
+      gap: 36px;
+    }
+
+    .footer-wordmark {
+      font-size: 40px;
+    }
+
+    .footer-tagline {
+      font-size: 17px;
+    }
+
+    .footer-links {
+      grid-template-columns: repeat(2, max-content);
+      gap: 64px;
     }
 
     .copyright {
       font-size: 13px;
-    }
-
-    .brand-desktop {
-      display: inline;
     }
 
     .signoff {

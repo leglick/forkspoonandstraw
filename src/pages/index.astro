@@ -5,7 +5,6 @@ import IntroCard from '../components/IntroCard.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import FeaturedPost from '../components/FeaturedPost.astro';
 import PostCard from '../components/PostCard.astro';
-import NewsletterBlock from '../components/NewsletterBlock.astro';
 
 const allPosts = (await getCollection('posts')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -51,8 +50,6 @@ const latestLabel = featured.data.date.toLocaleDateString('fr-FR', {
   <div class="entries-pill-wrap">
     <a class="entries-pill" href="/archive">see all {allPosts.length} posts <span aria-hidden="true">&rarr;</span></a>
   </div>
-
-  <NewsletterBlock />
 </BaseLayout>
 
 <style>
