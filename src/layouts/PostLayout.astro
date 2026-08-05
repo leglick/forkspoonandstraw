@@ -27,12 +27,13 @@ const segments = await Promise.all(
   )
 );
 
-// The post column caps at 680px (1440px at 2x for retina); without an
-// explicit size Astro's <Image> requests the source's full resolution,
-// which for phone photos can be several thousand pixels wide.
-const COVER_MAX_WIDTH = 1440;
-const coverWidth = Math.min(cover.width, COVER_MAX_WIDTH);
-const coverHeight = Math.round(coverWidth * (cover.height / cover.width));
+// Hero is inset to the same 680px text column as the rest of the post (not
+// full-bleed), cropped to a fixed 3:2 landscape. Request Astro-side
+// dimensions matching that ratio -- requesting the source's own proportions
+// instead would make Astro's image service crop to a different box than the
+// CSS aspect-ratio below expects, fighting the intended crop.
+const HERO_WIDTH = 1440;
+const HERO_HEIGHT = Math.round((HERO_WIDTH * 2) / 3);
 
 const dateLabel = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -40,7 +41,16 @@ const allPosts = (await getCollection('posts')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 const currentIndex = allPosts.findIndex((p) => p.data.slug === post.data.slug);
-const nextPost = allPosts[(currentIndex + 1) % allPosts.length];
+const defaultNextPost = allPosts[(currentIndex + 1) % allPosts.length];
+const overrideNextPost = post.data.readNext
+  ? allPosts.find((p) => p.data.slug === post.data.readNext)
+  : undefined;
+if (post.data.readNext && !overrideNextPost) {
+  console.warn(
+    `[PostLayout] "${post.data.slug}" has readNext: "${post.data.readNext}", but no post with that slug exists. Falling back to the default pick.`
+  );
+}
+const nextPost = overrideNextPost ?? defaultNextPost;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const jsonLd = {
@@ -83,7 +93,7 @@ const jsonLd = {
     </header>
 
     <div class="post-hero">
-      <Image src={cover} alt="" width={coverWidth} height={coverHeight} priority />
+      <Image src={cover} alt="" width={HERO_WIDTH} height={HERO_HEIGHT} priority />
     </div>
 
     <div class="prose">
@@ -184,18 +194,14 @@ const jsonLd = {
   }
 
   .post-hero {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    max-width: 100vw;
-    height: 300px;
-    overflow: hidden;
+    padding-inline: var(--gutter-text);
   }
 
   .post-hero :global(img) {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
+    border-radius: var(--radius-thumb);
     display: block;
   }
 
@@ -221,7 +227,7 @@ const jsonLd = {
     }
 
     .post-hero {
-      height: 480px;
+      padding-inline: 0;
     }
 
     .prose {

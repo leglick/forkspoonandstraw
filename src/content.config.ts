@@ -14,6 +14,11 @@ const posts = defineCollection({
       cover: image(),
       description: z.string(),
       readTime: z.number(),
+      // Manual override for the "Read next" card at the bottom of the post.
+      // Value is another post's `slug`. Falls back to the default
+      // reverse-chronological pick (see PostLayout.astro) if omitted or if
+      // the slug doesn't match any post.
+      readNext: z.string().optional(),
     }),
 });
 
