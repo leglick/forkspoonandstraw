@@ -5,7 +5,9 @@ import BaseLayout from './BaseLayout.astro';
 import TagRow from '../components/TagRow.astro';
 import Signoff from '../components/Signoff.astro';
 import ReadNext from '../components/ReadNext.astro';
+import Gallery from '../components/Gallery.astro';
 import { getCategorySlug } from '../lib/categories';
+import { splitPostBody, renderMarkdown } from '../lib/markdown';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -14,6 +16,16 @@ interface Props {
 
 const { post } = Astro.props;
 const { title, description, date, cover, categories, tags, readTime } = post.data;
+
+// Posts are plain .md (Obsidian can't edit .mdx), so `:::gallery{folder="x"}`
+// markers are split out of the raw body here and rendered as real <Gallery>
+// components between markdown chunks, rather than relying on MDX component
+// embedding. See src/lib/markdown.ts.
+const segments = await Promise.all(
+  splitPostBody(post.body ?? '').map(async (segment) =>
+    segment.type === 'gallery' ? segment : { ...segment, html: await renderMarkdown(segment.markdown) }
+  )
+);
 
 // The post column caps at 680px (1440px at 2x for retina); without an
 // explicit size Astro's <Image> requests the source's full resolution,
@@ -75,7 +87,15 @@ const jsonLd = {
     </div>
 
     <div class="prose">
-      <slot />
+      {
+        segments.map((segment) =>
+          segment.type === 'gallery' ? (
+            <Gallery post={post.data.slug} folder={segment.folder} />
+          ) : (
+            <Fragment set:html={segment.html} />
+          )
+        )
+      }
     </div>
 
     <div class="post-footer">

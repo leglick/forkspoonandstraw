@@ -1,0 +1,66 @@
+---
+title: 'Beating the Winter Blues'
+slug: 'beating-the-winter-blues'
+date: 2020-02-21
+categories: ['Pardon My Franglais']
+tags: []
+cover: './cover.jpg'
+description: 'Seriously, how is January both the fastest and the slowest month of the year?! It seems like it’s been this month for several years now … not all complaints because I’ve been up to lots of fun aventures! &#010;&#010;Like I said in my last post, we recently moved office spaces! We’re still waiting for some final touches'
+readTime: 4
+---
+
+Seriously, how is January both the fastest and the slowest month of the year?! It seems like it’s been this month for several years now … not all complaints because I’ve been up to lots of fun _aventures_! Like I said in my last post, we recently moved office spaces! We’re still waiting for some final touches like a _canapé_ and a new kitchen table, but all in all it’s coming together. And the sunsets have been killer!
+
+:::gallery{folder="general"}
+
+I had a belated Christmas dinner with my _colocs_ where we had homemade lasagna. The apartment is still a _coloc de rêve_ (dream house) and we try to do something all together each week whether it’s a little homemade meal, getting dumplings and beer ...
+
+:::gallery{folder="general-2"}
+
+It’s the _soldes d’hiver_ which are the government-mandated sales and let me tell you there are sales on just about everything! With my friend Cassandra, we hit the shops in _centre-ville_ (stopping for a _crêpe_ break, _bien sur_) before heading to grab tapas with some of her friends.
+
+:::gallery{folder="general-3"}
+
+And the next day was a trip to the spa! We relaxed in the heated pools (with a beautiful, sunny winter day) and popped into the saunas to sweat it all out.
+
+:::gallery{folder="general-4"}
+
+I took a trip to the French eye doctor to test out that new _mutuelle_ and now I just have to buy my contacts and glasses with my updated prescriptions. All in all it was pretty easy! However, the fact that I got soaked in the rain on my way back to work was not enjoyable. Luckily I had my slippers and gym clothes at work to change into because I was drenched.
+
+Then that night... _c’était partie en karaoke !_ (It was a karaoke night!). My _colocs_, my friend, and a coworker all had a blast enjoying the night. The next week-end I grabbed drinks with Cassandra, Louise and two of her friends on Saturday and we ended up actually _sortir_\-ing (going out) just until the wee hours of the morning! 💀
+
+:::gallery{folder="general-5"}
+
+The next week seemed to fly by and before I knew it, I was headed to the theatre with my girlfriends! We saw _une comédie_ and luckily I understood (most of) it and laughed along with everyone else!
+
+Highlights of the next week included getting a really cool "Smart Screen" at work where we can work and draw on the screen! We had a blast drawing and figuring out all the cool features. Things at work are always moving at a quick pace, but I've still been enjoying it and getting to create GIFs and cards with our new Photoshop license.
+
+Friday, my _bînome_, Léa and I headed off to our weekend trip to Bordeaux! I had been looking forward to our little getaway since we had started planning it! Léa had done part of her studies in university _là-bas_ so she knew the ins and outs of the city pretty well. Bordeaux is about 2 and a half hours from Toulouse and our ride-share dropped us off right in the city center a few blocks from our AirBnB. We showered and recharged for a bit before heading to dinner at Mama Shelter.
+
+:::gallery{folder="general-6"}
+
+Saturday mornin, our first stop was brunch! And pancakes! We found a little café that had pancakes that were just ok ... and had a tiny rat outside! _Vive la France_ am I right! After our _petit-déjeuner_, we decided to walk along the _quais_ next to the river and take advantage of the lack of rain. We saw the famous _Miroir d'Eau_ (without the water that turns it into a mirror!)
+
+:::gallery{folder="general-7"}
+
+We walked quite aways and then decided to rent bikes to head back towards _centre-ville_ to make our journey shorter! We then grabbed a drink to rest our feet for a bit. The afternoon was spent shopping and exploring the little streets.
+
+:::gallery{folder="general-8"}
+
+Bordeaux is home to the longest, pedestrian street in Europe and it seriously reminded me of [India](/posts/feeling-gold-in-the-golden-triangle) with just a sea of people walking on the street! We were pretty wiped and decided to get a healthier dinner of _poké-ritos_ .... poké + burritos! It was really good and we had a chill night in with a movie and some _crêpes!_
+
+:::gallery{folder="general-9"}
+
+We had a little bit of a _grasse matinée_ (sleeping in) and packed up our bags before heading to our second brunch of the weekend. This brunch was considerably better than the first with _viennoisseries, tartines,_ pancakes, an egg sandwich, fruit and soup!
+
+:::gallery{folder="general-10"}
+
+We dropped our bags off at a locker-storage we found and then _s'est promenées_ (walked around) in the _soleil_ (sunlight) since it was a beautiful day in the upper 60s! We spend the afternoon soaking up the sun before grabbing (another) poké bowl and taking our ride-share back to Toulouse.
+
+:::gallery{folder="general-11"}
+
+It was a lovely weekend filled with lots of exploring, laughing, and eating good food! Bordeaux is such a cute little, city and reminded me of a little Paris!
+
+January had a lot of fun adventures and really flew by, even though it seemed like there were way more than 31 days!
+
+![](./images/inline/01.jpg)

@@ -1,0 +1,34 @@
+---
+title: 'A Summer Life Update'
+slug: 'a-summer-life-update'
+date: 2019-09-20
+categories: ['Pardon My Franglais']
+tags: []
+cover: './cover.jpg'
+description: 'Hello! Bonjour ! I''ve been catching up on my sleep from all my travel this past year and summer (living in Nice, visiting Eastern Europe, a trip to Greece, a summer holiday in the Maldives ...) and of course blogging all about it! I came back to the States in mid-May and after a week catching up with my grandparents ..'
+readTime: 2
+---
+
+Hello! _Bonjour !_
+
+I've been catching up on my sleep from all my travel this past year and summer (living in [Nice](/posts/ello-and-au-revoir-a-year-s-tapif-recap), visiting [Eastern Europe](/posts/budapest-aka-buda-best), a trip to [Greece](/posts/it-s-all-greek-to-me-part-2-milos-santorini), a summer holiday in the [Maldives](/posts/let-s-maldives-right-in) ...) and of course blogging all about it!
+
+I came back to the States in mid-May and after a week catching up with my grandparents, mom and sister, I headed to Florida to a conference for my senior thesis! It was so fun to present our semester-long project and of course see my good friend Isabelle again! As luck would have it, I also met up with my friend, Jenn who I hadn't seen in a year for some fun in the sun!
+
+:::gallery{folder="general"}
+
+I worked half the summer as a waitress again, and did my online teaching to Chinese kiddos during the mornings. I had started applying to "real" jobs in January, with a few interviews but no real leads and at the end of May, I heard back from a company I had sent my CV and cover letter to - they wanted a Skype interview!
+
+The interview fluctuated between French and English and there was some stress at the end when my WiFi stopped working and I had to run down the road (and brave the swarms of mosquitoes) to send a message, explaining what happened. And then a week later I had another interview... and then 2 weeks later another one! And then before I knew it, I was officially employed IN FRANCE!
+
+I'll be doing some marketing work for a startup in Toulouse (near the border with Spain this time) and now I have about a week until I fly out. I've been busy visiting my friends who live close-by, spending time with my family, looking for apartments, dealing with the visa situation, and of course ... eating all my American food faves before I jet off!
+
+:::gallery{folder="general-2"}
+
+So, ForkSpoon&Straw is heading back to France _encore une fois,_ and I, for one, couldn't be happier. It's a quite scary to think that I'll be in a different continent indefinitely, but I'm excited for the new adventure, and know that I can still come back and visit (and I will have many visitors I'm sure). My new company seems super nice and helpful (they're even picking me up at the airport! wow!).
+
+Stay tuned for more travel and tasty eats!
+
+_Gros bisous_,
+
+![](./images/inline/01.jpg)

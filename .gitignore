@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Obsidian vault config (src/content/posts/ doubles as the Obsidian vault
+# authors write posts in) -- local editor state, not content.
+.obsidian/
