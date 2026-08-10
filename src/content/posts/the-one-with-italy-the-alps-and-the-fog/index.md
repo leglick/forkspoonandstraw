@@ -5,11 +5,11 @@ date: 2018-11-23
 categories: ['Pardon My Franglais', 'Travel']
 tags: []
 cover: './cover.jpg'
-description: 'Coucou à tous et à toutes ! It’s your favorite mountain goat here back from vacation — my housemates’ friends came to visit these past 2 weeks so I’ve been tagging along on all their aventures. The first trip was to Monaco for a few hours (what is my life!?)'
+description: 'Coucou à tous et à toutes ! It’s your favorite mountain goat here back from vacation - my housemates’ friends came to visit these past 2 weeks so I’ve been tagging along on all their aventures. The first trip was to Monaco for a few hours (what is my life!?)'
 readTime: 4
 ---
 
-_Coucou à tous et à toutes !_ It’s your favorite mountain goat here back from vacation — my housemates’ friends came to visit these past 2 weeks so I’ve been tagging along on all their _aventures_.
+_Coucou à tous et à toutes !_ It’s your favorite mountain goat here back from vacation - my housemates’ friends came to visit these past 2 weeks so I’ve been tagging along on all their _aventures_.
 
 The first trip was to Monaco for a few hours (what is my life!?) It was fun to see the casino and walk around Monte Carlo for a bit before hopping back on a train to Nice! The country is quite small and it is perfect for a day trip to explore the city. That’s wild to me that so many places are a short train ride away.
 

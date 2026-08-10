@@ -1,11 +1,12 @@
 ---
-title: 'Des voyages entre villes'
-slug: 'des-voyages-entre-villes'
+title: Des voyages entre villes
+slug: des-voyages-entre-villes
 date: 2019-06-10
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Villefranche sur Mer The weather has been so gorgeous, we all wanted to go to a sandy beach! Nice is nice, but we needed a change from the pebbles and rocks. Friday morning, Katie and I headed out on 2 stops on the train to Villefranche-sur-Mer for the afternoon.'
+cover: ./cover.jpg
+description: It's such a [nice] time bopping around the coastal cities near Nice
 readTime: 3
 ---
 
@@ -17,7 +18,7 @@ The weather has been so gorgeous, we all wanted to go to a sandy beach! Nice is 
 
 > la vie en _rosé_
 
-The train station dropped us off across the street from the beaches and we spend the rest of the day lounging and _pique-nique_ing and taking plenty of photos on the gorgeous golden _sable_. Abby met us in the afternoon and we got our tan on! Then, we wandered around the cute, little streets of the Old Town and even popped in some little shops. As the sun set, we took the bus back to Nice for some evening mojitos for _apéro_ and some tacos for dinner.
+The train station dropped us off across the street from the beaches and we spend the rest of the day lounging and _pique-nique-ing and taking plenty of photos on the gorgeous golden sable_. Abby met us in the afternoon and we got our tan on! Then, we wandered around the cute, little streets of the Old Town and even popped in some little shops. As the sun set, we took the bus back to Nice for some evening mojitos for _apéro_ and some tacos for dinner.
 
 :::gallery{folder="villefranche-sur-mer-2"}
 
@@ -55,7 +56,7 @@ The weather could not have been more perfect and we has a blast laying on the be
 
 It was our last day all together ... and _Les Filles de Chateauneuf_ headed out to Monaco! We were going to a concert! We had always talked about going to see an orchestra or a ballet and now we were actually doing it.
 
-We grabbed some French tacos (for the memories— it was our first meal all together in the apartment!) and headed out on the train. We made it to the station in a little under a half-hour and walked into town.
+We grabbed some French tacos (for the memories - it was our first meal all together in the apartment!) and headed out on the train. We made it to the station in a little under a half-hour and walked into town.
 
 :::gallery{folder="monaco"}
 
