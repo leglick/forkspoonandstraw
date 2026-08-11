@@ -18,13 +18,32 @@ const { post } = Astro.props;
 const { title, description, date, cover, categories, tags, readTime } = post.data;
 
 // Posts are plain .md (Obsidian can't edit .mdx), so `:::gallery{folder="x"}`
-// markers are split out of the raw body here and rendered as real <Gallery>
-// components between markdown chunks, rather than relying on MDX component
-// embedding. See src/lib/markdown.ts.
+// markers and standalone `![alt](./relative.jpg)` images are split out of
+// the raw body here and rendered as real <Gallery>/<Image> components
+// between markdown chunks, rather than relying on MDX component embedding
+// or Astro's normal Content rendering (which is what would otherwise
+// optimize inline markdown images automatically). See src/lib/markdown.ts.
+const allPostImages = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/content/posts/*/images/**/*.{jpeg,jpg,png,webp,avif}',
+  { eager: true }
+);
+
+function resolveInlineImage(path: string) {
+  return allPostImages[`/src/content/posts/${post.data.slug}/${path}`]?.default;
+}
+
 const segments = await Promise.all(
-  splitPostBody(post.body ?? '').map(async (segment) =>
-    segment.type === 'gallery' ? segment : { ...segment, html: await renderMarkdown(segment.markdown) }
-  )
+  splitPostBody(post.body ?? '').map(async (segment) => {
+    if (segment.type === 'gallery') return segment;
+    if (segment.type === 'image') {
+      const resolved = resolveInlineImage(segment.path);
+      if (!resolved) {
+        console.warn(`[PostLayout] "${post.data.slug}": inline image "./${segment.path}" not found, skipping.`);
+      }
+      return { ...segment, resolved };
+    }
+    return { ...segment, html: await renderMarkdown(segment.markdown) };
+  })
 );
 
 // Hero is inset to the same 680px text column as the rest of the post (not
@@ -98,13 +117,22 @@ const jsonLd = {
 
     <div class="prose">
       {
-        segments.map((segment) =>
-          segment.type === 'gallery' ? (
-            <Gallery post={post.data.slug} folder={segment.folder} />
-          ) : (
-            <Fragment set:html={segment.html} />
-          )
-        )
+        segments.map((segment) => {
+          if (segment.type === 'gallery') {
+            return <Gallery post={post.data.slug} folder={segment.folder} />;
+          }
+          if (segment.type === 'image') {
+            if (!segment.resolved) return null;
+            // Matches the same COVER_MAX_WIDTH-style logic as the hero: cap
+            // at 2x the 680px prose column, keep the source's own aspect
+            // ratio (CSS-side height:auto handles the rest -- see the
+            // global img,picture reset).
+            const width = Math.min(segment.resolved.width, 1360);
+            const height = Math.round(width * (segment.resolved.height / segment.resolved.width));
+            return <Image src={segment.resolved} alt={segment.alt} width={width} height={height} loading="lazy" />;
+          }
+          return <Fragment set:html={segment.html} />;
+        })
       }
     </div>
 
