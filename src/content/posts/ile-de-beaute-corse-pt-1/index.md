@@ -16,7 +16,7 @@ readNext: ile-de-beaute-corse-pt-2
 ---
 
 
-We started our périple to Corsica in early September, stopping in Montpellier for a night to see some friends and head to the beach before we hopped on the ferry (car included!) the next evening in Marseille. (It’s also important to note that at this point in our trip, I already had quite a few blisters … keep that in mind for later!) 
+We started our _périple_ to Corsica in early September, stopping in Montpellier for a night to see some friends and head to the beach before we hopped on the ferry (car included!) the next evening in Marseille. (It’s also important to note that at this point in our trip, I already had quite a few blisters … keep that in mind for later!) 
 
 :::gallery{folder="ferry"}
 
