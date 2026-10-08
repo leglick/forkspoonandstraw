@@ -12,6 +12,7 @@ description: Part 2 of our Corsican adventures, all the places we saw and all th
 tags:
   - travel
   - corsica
+readNext: ile-de-beaute-corse-pt-3
 ---
 
 
@@ -19,7 +20,7 @@ About a week into our _voyage en Corse_ and we definitely understood why they ca
 
 ##### bonifacio? more like _Beau_-nifacio! 
 
-After our [couple of days in the mountains](https://forkspoonandstraw.com/ile-de-beaute-corse-pt-1), we were equally as happy to head back down to the coast for some ocean _aventures_. We drove a few hours (still amazed by the winding roads that took us back down to sea level) until we hit Bonifacio on the southern tip of the island. 
+After our [couple of days in the mountains](https://forkspoonandstraw.com/posts/ile-de-beaute-corse-pt-1), we were equally as happy to head back down to the coast for some ocean _aventures_. We drove a few hours (still amazed by the winding roads that took us back down to sea level) until we hit Bonifacio on the southern tip of the island. 
 
 ![Bonifaci-WOW](./images/boni1.jpeg)
 
