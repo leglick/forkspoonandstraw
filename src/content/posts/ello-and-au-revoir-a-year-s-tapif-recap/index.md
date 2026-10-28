@@ -1,12 +1,14 @@
 ---
-title: '''ello and au revoir: a year''s TAPIF recap'
-slug: 'ello-and-au-revoir-a-year-s-tapif-recap'
+title: "'ello and au revoir: a year's TAPIF recap"
+slug: ello-and-au-revoir-a-year-s-tapif-recap
 date: 2019-04-29
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Imaginez que you work 12 hours a week, 2-3 days a week, with minimal outside work except for creating the occasional PowerPoint on Halloween or popular American songs … Sounds like a dream, doesn’t it?! Well welcome to my life for the past seven months. As an English Language Assistant through the CIEP'
+cover: ./cover.jpg
+description: The Good, The Bad & The Complicated of a year as an English teaching assistant in the South of France
 readTime: 5
+readNext: my-first-month-in-toulouse
 ---
 
 _Imaginez que_ you work 12 hours a week, 2-3 days a week, with minimal outside work except for creating the occasional PowerPoint on Halloween or popular American songs …
@@ -27,13 +29,13 @@ Opening a bank account here was also a huge struggle, I technically didn’t hav
 
 ![](./images/inline/01.jpg)
 
-there must be more than this provençal life!
+>there must be more than this provençal life!
 
-**Le Complicated :** France’s bureaucracy always gets the best of me. For example, I applied for CAF which is basically public aid since we make such little money and (luckily!) received aid for my first two months here, but from then on, I was pretty much denied anything else since I was told “you make too much money”. Not quite sure what changed from month to month but I tried my best (aka pestered and sent many, many emails).
+**Le Complicated :** France’s bureaucracy always gets the best of me. For example, I applied for CAF which is basically public aid since we make such little money and (luckily!) received aid for my first two months here, but from then on, I was pretty much denied anything else since I was told “you make too much money”. Not quite sure what changed from month to month (sure as heck wasn't my _salaire_) but I tried my best (aka pestered and sent many, many emails).
 
-I came into this year knowing we would only make a little money, and spent all summer plumping up my savings account – however my rent was still much more than I expected and my plane ticket home also cut deep into my savings. Luckily, there are side hustles you can do as an assistant such as teach English online (@ me for my referral code) and babysit or tutor.
+I came into this year knowing we would only make a little money, and spent all summer plumping up my savings account – however my rent was still much more than I expected and my plane ticket home also cut deep into my savings. Luckily, there are side hustles you can do as an assistant such as teach English online or babysit or tutor.
 
-I also had much more free time than most other assistants I know because I only work Monday and Tuesday since my school is about two hours from my apartment. My school is a boarding school so I’m allowed to stay there Monday nights (an extra night of rent holla!) and my secretary and I worked together to make sure I was able to fit all my hours in the two days. Personally, the biggest downfall with this is finding someone to take me back down to Nice on Tuesday nights since I hate asking people for favors. But that seems like a personal problem.
+I also had much more free time than most other assistants I know because I only work Monday and Tuesday since my school is about two hours from my apartment. My school is a boarding school so I’m allowed to stay there Monday nights (an extra night of rent, holla!) and my secretary and I worked together to make sure I was able to fit all my hours in the two days. Personally, the biggest downfall with this is finding someone to take me back down to Nice on Tuesday nights since I hate asking people for favors. And figuring out how to have an hour discussion in French. But in hindsight, it let me get closer to a lot of my cool colleagues and have some fun grocery store shopping adventures (and even a bar of chocolate to give us the boost we needed to get down the mountain. Literally.)
 
 ![](./images/inline/02.jpg)
 
