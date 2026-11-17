@@ -1,23 +1,25 @@
 ---
-title: 'My First Month in Toulouse'
-slug: 'my-first-month-in-toulouse'
+title: My First Month in Toulouse
+slug: my-first-month-in-toulouse
 date: 2019-10-26
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpeg'
-description: 'I started my journey to Toulouse at 4 am on the 25th of September... Well not my journey so to speak, we had to drop Dad off at the airport and then head back to pack my last bag before we left for Boston. 2 suitcases, 1 carryon, and 1 shipped duffel later and I was en route.'
+cover: ./cover.jpeg
+description: I'm heading back to France ... for a real-life, big-girl, grown-up job! Follow along as I head to the Southwest of France for a new adventure
 readTime: 6
+readNext: touloused-and-confused-my-coup-de-coeur-restaurants
 ---
 
 I started my journey to Toulouse at 4 am on the 25th of September... Well not my journey so to speak, we had to drop Dad off at the airport and then head back to pack my last bag before we left for Boston. 2 suitcases, 1 carryon, and 1 shipped duffel later and I was _en route._
 
 ![](./images/inline/01.jpeg)
 
-Allez c'est partie !
+>Allez c'est parti !
 
 The 5 hour drive flew by and I even got to meet with Kristen for an hour before it was time to leave. We got dinner (shoutout to my very Amercan last meal of corn, bacon and cheese). Let me tell you, the tears were real all day. No matter how many goodbyes I do, they really don’t get any easier.
 
-![](./images/inline/02.jpg)
+
 
 I relaxed in the international terminal for about an hour before we started to board. We left on time and I had my little dinner on the plane (with wine _bien sur_!) before falling asleep with my new foot hammock which was a lifesaver because ...
 
@@ -27,7 +29,7 @@ My second flight from London to Toulouse was delayed and y’all know the antici
 
 ![](./images/inline/03.jpeg)
 
-view from the apartment
+>view from my temporary apartment
 
 We chatted on the way and then got to the apartment I’d be staying in for the next few weeks until I found a place of my own (which would be longer than I expected but don’t worry we’ll get to that later!). One of my coworker’s parents had an apartment in Toulouse that had unfortunately gone through some water damage but luckily they said I was more than welcome to stay on the pullout couch. The apartment is super nice and I’m definitely going to be a little sad to leave it ...
 
@@ -66,5 +68,3 @@ So all in all things are going well! I’m quite pleased with work and I’m exc
 Thanks for reading along my life updates for the first few weeks in _la ville rose!_
 
 _Bisous_,
-
-![](./images/inline/07.jpg)
