@@ -45,3 +45,10 @@
 /post/let-s-go-a  /posts/let-s-go-a  301
 /post/around-the-world-in-3-weeks  /posts/around-the-world-in-3-weeks  301
 /post/ski-you-later  /posts/ski-you-later  301
+
+# Old Wix "/home/..." links that migrated posts still contain.
+# Specific (accented slug) first, then the generic one-segment catch-all.
+/home/printemps-%C3%A0-paris-blessed-in-barcelona  /posts/printemps-a-paris-blessed-in-barcelona  301
+/home/hashtags/*  /  301
+/home/:slug  /posts/:slug  301
+/home  /  301

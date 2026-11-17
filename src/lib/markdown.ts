@@ -15,7 +15,69 @@ import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 
-const processor = unified().use(remarkParse).use(remarkGfm).use(remarkRehype).use(rehypeStringify);
+// Hashtags: the Wix export turned every #hashtag into a link to a Wix
+// hashtag page (/home/hashtags/...) that no longer exists. Render those as
+// plain-text "pill" spans instead (styled by .hashtag in global.css), and do
+// the same for hashtags typed as plain text, so old and new posts match.
+// Number-only ones (#1, #2 -- Wix auto-linked "Flight #1" etc.) stay plain
+// text: they're numbering, not tags.
+// Done at render time, so the post files themselves are left untouched.
+const HASHTAG_LINK = /\/home\/hashtags\//;
+const HAS_LETTER = /\p{L}/u;
+const HASHTAG_IN_TEXT = /(^|\s)(#[\p{L}\p{N}_]*\p{L}[\p{L}\p{N}_]*)/gu;
+// Nodes whose text must not be touched: link text (e.g. "Video hike #1"),
+// headings, and code.
+const SKIP_TYPES = new Set(['link', 'linkReference', 'heading', 'inlineCode', 'code']);
+
+// The `emphasis` type is only a vehicle: data.hName/hProperties make
+// remark-rehype emit <span class="hashtag"> instead of <em>.
+function hashtagSpan(value: string): any {
+  return {
+    type: 'emphasis',
+    data: { hName: 'span', hProperties: { className: ['hashtag'] } },
+    children: [{ type: 'text', value }],
+  };
+}
+
+function linkText(node: any): string {
+  if (typeof node.value === 'string') return node.value;
+  return (node.children ?? []).map(linkText).join('');
+}
+
+function rewriteHashtags(parent: any): void {
+  const next: any[] = [];
+  for (const child of parent.children ?? []) {
+    if (child.type === 'link' && HASHTAG_LINK.test(child.url ?? '')) {
+      const text = linkText(child);
+      next.push(HAS_LETTER.test(text) ? hashtagSpan(text) : { type: 'text', value: text });
+    } else if (child.type === 'text') {
+      let last = 0;
+      for (const m of child.value.matchAll(HASHTAG_IN_TEXT)) {
+        const start = (m.index ?? 0) + m[1].length;
+        if (start > last) next.push({ type: 'text', value: child.value.slice(last, start) });
+        next.push(hashtagSpan(m[2]));
+        last = start + m[2].length;
+      }
+      if (last === 0) next.push(child);
+      else if (last < child.value.length) next.push({ type: 'text', value: child.value.slice(last) });
+    } else {
+      if (!SKIP_TYPES.has(child.type)) rewriteHashtags(child);
+      next.push(child);
+    }
+  }
+  parent.children = next;
+}
+
+function remarkHashtags() {
+  return (tree: any) => rewriteHashtags(tree);
+}
+
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkHashtags)
+  .use(remarkRehype)
+  .use(rehypeStringify);
 
 export async function renderMarkdown(markdown: string): Promise<string> {
   const file = await processor.process(markdown);

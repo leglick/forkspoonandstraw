@@ -142,6 +142,7 @@ Write below the closing `---`. Leave a blank line between paragraphs.
 | Pull-quote / aside band | `> Pro-traveler tip: book dinner early` | Full-width blue band, italic serif text |
 | Bullet list | `* item` or `- item` | Small coral dot before each item, space between items |
 | Numbered list | `1. item` | Coral numbers, space between items |
+| Hashtag | `#nopunintended` (just type it) | Small coral pill in bold sans-serif. Needs at least one letter: `#1`, `#2` stay plain text |
 
 Rules that matter:
 - **Gallery and single-photo lines must each be on their own line**, with a blank
@@ -163,6 +164,8 @@ Rules that matter:
 - Don't use HTML tags (`<br>`, `<iframe>`, ...). They are silently dropped.
 - Tables, code blocks, footnotes and `---` divider lines aren't styled for this site,
   so avoid them.
+- **Hashtags**: type `#word` as normal text (no link). Don't put one inside a heading or inside
+  link text; those stay plain.
 - **Lists**: put a blank line before the first item, and one item per line. Each bullet
   gets a small coral dot and each numbered item a coral number. Don't put a loose line
   (like a lone "and") right under an item: it becomes part of that item.

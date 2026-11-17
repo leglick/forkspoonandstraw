@@ -269,6 +269,29 @@ a:hover {
   margin-top: var(--sp-10);
 }
 
+/* #hashtags (see src/lib/markdown.ts): plain text, but a small coral pill in
+   upright sans so they pop against the serif body copy and don't read as
+   French-word italics. Text is a darker coral than --paprika so it stays
+   legible on the tinted pill. */
+.prose .hashtag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78em;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 1px 9px 2px;
+  border-radius: var(--radius-pill);
+  background: rgba(224, 144, 138, 0.18);
+  color: color-mix(in srgb, var(--paprika) 65%, var(--espresso));
+  white-space: nowrap;
+}
+
+.prose blockquote .hashtag {
+  background: rgba(253, 250, 244, 0.16);
+  color: var(--creme);
+}
+
 /* Wix blockquotes ("> Very Stephen King vibes.") are the closest existing
    content maps to the Callout component's full-bleed treatment — style
    them the same way rather than requiring every legacy post to be rewritten

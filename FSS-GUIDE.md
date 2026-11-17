@@ -110,7 +110,10 @@ material is in `design/` and `astro-build-notes.md`.
 6. `scripts/recompress-images.mjs` was a one-time migration tool. Do **not** re-run it:
    it recompresses everything again and its reference-fixing step still looks for
    `index.mdx`.
-7. Old Wix links still redirect only because of `public/_redirects`. Leave that file.
+7. Old Wix links still redirect only because of `public/_redirects` (old `/post/slug` and
+   `/home/...` addresses). Leave that file.
+8. Old `#hashtag` links from Wix are rendered as plain coral pills by `src/lib/markdown.ts`
+   (the post files still contain the dead Wix links, which is harmless).
 
 ## 6. Where the old PDF ("FSS how to.pdf") is wrong
 - It says to name the post `index.mdx`. That is wrong now (see gotcha 1). Use `index.md`.

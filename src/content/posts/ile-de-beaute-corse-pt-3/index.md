@@ -13,7 +13,7 @@ tags:
   - travel
   - corsica
 ---
-We had seen the [mountains](https://forkspoonandstraw.com/posts/ile-de-beaute-corse-pt1), we had discovered the [beautiful blue water on the plages](https://forkspoonandstraw.com/posts/ile-de-beaute-corse-pt-2) ... but we had yet to head into any of the "big" cities on the island.
+We had seen the [mountains](https://forkspoonandstraw.com/posts/ile-de-beaute-corse-pt-1), we had discovered the [beautiful blue water on the plages](https://forkspoonandstraw.com/posts/ile-de-beaute-corse-pt-2) ... but we had yet to head into any of the "big" cities on the island.
 
 ##### ajaccio adventures
 
