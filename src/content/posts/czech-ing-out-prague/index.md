@@ -1,11 +1,12 @@
 ---
-title: 'Czech-ing out Prague'
-slug: 'czech-ing-out-prague'
+title: Czech-ing out Prague
+slug: czech-ing-out-prague
 date: 2018-10-25
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'Tuesday morning, I left Madrid (with one last bocadillo sandwich) and spent most of the day at the airport or in the air or on the Prague metro to get to my next break location – the Czech Republic! The metro was pretty easy to use and I was at the AirBnb with no problems.'
+cover: ./cover.jpg
+description: The Fall break adventures continue as I head to the Czech Republic and discover my new fave pastry
 readTime: 3
 ---
 

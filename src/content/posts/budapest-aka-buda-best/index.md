@@ -1,11 +1,12 @@
 ---
-title: 'Budapest aka Buda-Best'
-slug: 'budapest-aka-buda-best'
+title: Budapest aka Buda-Best
+slug: budapest-aka-buda-best
 date: 2018-11-06
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'We got to Budapest in about 3 hours from Bratislava and checked into our super nice AirBnb! We stayed in Buda, pretty close to the river. The city is actually two cities - Buda and Pest which were combined 1873.'
+cover: ./cover.jpg
+description: The perfect city to end my Fall break travels - with thermal baths to soak my tired feet!
 readTime: 4
 ---
 

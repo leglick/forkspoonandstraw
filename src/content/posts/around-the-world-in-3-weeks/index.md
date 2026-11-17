@@ -1,11 +1,12 @@
 ---
-title: 'Around the World ... in 3 weeks?'
-slug: 'around-the-world-in-3-weeks'
+title: Around the World ... in 3 weeks?
+slug: around-the-world-in-3-weeks
 date: 2019-01-06
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'Coucou ! or should I say Ciao or Gutentag .... aka its a very special edition of Pardon My Franglais (drumroll please!) The fam came to visit! We had one helluva an aventure these past 3 weeks starting in Rome, heading down the Amalfi Coast, flying to Munich, driving to Nuremburg for Christmas.'
+cover: ./cover.jpg
+description: The family takes Europe - road-trip edition!
 readTime: 1
 ---
 

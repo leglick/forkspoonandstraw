@@ -1,11 +1,12 @@
 ---
-title: 'MumBYE America, Hello India!'
-slug: 'mumbye-america-hello-india'
+title: MumBYE America, Hello India!
+slug: mumbye-america-hello-india
 date: 2019-08-21
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'Our trip to India started way back in June, when I started planning for my Dad to visit my sister Claire after she was finished doing research at a prestigious lab doing groundbreaking experiments on Alzheimer’s #proudsister. Claire kept asking me if I was coming and I kept putting it off ...'
+cover: ./cover.jpg
+description: Setting my feet in Asia for the first time with lots of rikshaws, great food, and of course, chai!
 readTime: 4
 ---
 

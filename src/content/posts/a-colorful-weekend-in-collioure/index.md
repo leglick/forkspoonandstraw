@@ -1,11 +1,12 @@
 ---
-title: 'A Colorful Weekend in Collioure'
-slug: 'a-colorful-weekend-in-collioure'
+title: A Colorful Weekend in Collioure
+slug: a-colorful-weekend-in-collioure
 date: 2021-03-20
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'We headed to Collioure on the French seaside for a weekend getaway entre copains for hiking, exploring little villages, and of course lots of good eats! '
+cover: ./cover.jpg
+description: We headed to Collioure on the French seaside for a weekend getaway entre copains for hiking, exploring little villages, and of course lots of good eats!
 readTime: 3
 ---
 

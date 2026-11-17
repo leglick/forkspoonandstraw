@@ -1,11 +1,12 @@
 ---
-title: '''ello and au revoir: a year''s TAPIF recap'
-slug: 'ello-and-au-revoir-a-year-s-tapif-recap'
+title: "'ello and au revoir: a year's TAPIF recap"
+slug: ello-and-au-revoir-a-year-s-tapif-recap
 date: 2019-04-29
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Imaginez que you work 12 hours a week, 2-3 days a week, with minimal outside work except for creating the occasional PowerPoint on Halloween or popular American songs … Sounds like a dream, doesn’t it?! Well welcome to my life for the past seven months. As an English Language Assistant through the CIEP'
+cover: ./cover.jpg
+description: As an English Language Assistant through the CIEP (TAPIF for all my Americans out there!), I worked at a high school in Nice, France and spent the rest of my 156 hours of my weeks figuring out what to do with my life.
 readTime: 5
 ---
 

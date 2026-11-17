@@ -1,11 +1,12 @@
 ---
-title: 'Carnival Craziness'
-slug: 'carnival-craziness'
+title: Carnival Craziness
+slug: carnival-craziness
 date: 2019-04-04
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'I always knew Carnival (or Carnaval in French) was a huge thing in Rio and Venice, but it turns out that Nice has the 3rd largest celebration in the world! A bit before February break, I started noticing some changes aka some bleachers set up in Masséna, gates along the Promenade ...'
+cover: ./cover.jpg
+description: Parades and floats and lemons ... oh my!
 readTime: 4
 ---
 

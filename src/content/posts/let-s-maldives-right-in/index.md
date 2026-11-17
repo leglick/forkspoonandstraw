@@ -1,11 +1,12 @@
 ---
-title: 'Let''s MalDIVEs right in ...'
-slug: 'let-s-maldives-right-in'
+title: Let's MalDIVEs right in ...
+slug: let-s-maldives-right-in
 date: 2019-09-12
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: '[We''re on vacation in Southeast Asia! Read about part 1 in Mumbai here.] 6 am came way too early for 2 jet lagged international travelers (Dad and I) and 1 overworked researcher (Claire) but we made it to the airport via taxi, with our suitcases riding on top. We went through security - boys and girls separate ...'
+cover: ./cover.jpg
+description: When in 𝚁̶𝚘̶𝚖̶𝚎̶ India, and the Maldives are just next door, you hop on a plane (and a boat) and go!
 readTime: 5
 ---
 

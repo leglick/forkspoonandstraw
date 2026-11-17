@@ -1,11 +1,12 @@
 ---
-title: 'Austria was a Wien-er'
-slug: 'austria-was-a-wiener'
+title: Austria was a Wien-er
+slug: austria-was-a-wiener
 date: 2018-10-28
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'The next morning, the Prague pals split and I headed to Vienna. Or at least tried to. I left the AirBnb with a little under hour to take the 20 minute walk to the station and some extra time to grab a coffee for my train ride. Suitcase in hand, I had an average walk ... until the last 5 minutes.'
+cover: ./cover.jpg
+description: My Fall break continues popping around in chateaux across Europe - Vienna-edition!
 readTime: 3
 ---
 

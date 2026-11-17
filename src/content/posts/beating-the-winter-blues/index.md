@@ -1,11 +1,12 @@
 ---
-title: 'Beating the Winter Blues'
-slug: 'beating-the-winter-blues'
+title: Beating the Winter Blues
+slug: beating-the-winter-blues
 date: 2020-02-21
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Seriously, how is January both the fastest and the slowest month of the year?! It seems like it’s been this month for several years now … not all complaints because I’ve been up to lots of fun aventures! &#010;&#010;Like I said in my last post, we recently moved office spaces! We’re still waiting for some final touches'
+cover: ./cover.jpg
+description: And yes, even the South of France has their own version of "winter" ...
 readTime: 4
 ---
 

@@ -1,11 +1,13 @@
 ---
-title: 'With Great [Powder] Comes Great Responsibility! (Work Seminar `20)'
-slug: 'with-great-powder'
+title: With Great [Powder] Comes Great Responsibility! (Work Seminar `20)
+slug: with-great-powder
 date: 2020-03-30
-categories: ['Travel', 'Pardon My Franglais']
+categories:
+  - Travel
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'The last Wednesday en fevrier the Picta''Team had an early start to their mornings because on partait en séminaire ! It was the annual work seminar, although chez nous it''s more of a work retreat! My suitcase was packed and I battled the rain to get picked up by my collègue and we headed to work a bit earlier than usual. Everyone arrived on time and got their morning café and we loaded up on the bus and headed out! Direction ... Andorre and the Pyrenees! We had about 3 hours on the road and every'
+cover: ./cover.jpg
+description: The last Wednesday en fevrier the Picta'Team had an early start to their mornings because on partait en séminaire ! It was the annual work seminar, although chez nous it's more of a work retreat!
 readTime: 5
 ---
 

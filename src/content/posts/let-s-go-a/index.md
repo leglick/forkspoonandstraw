@@ -1,11 +1,12 @@
 ---
-title: 'Let''s Go(a)!'
-slug: 'let-s-go-a'
+title: Let's Go(a)!
+slug: let-s-go-a
 date: 2019-09-18
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'Our first morning in Goa, we let ourselves sleep in a bit and grabbed breakfast around 9:30 in the lobby. The hotel had a huge buffet of local Indian foods so we loaded up (as much as I could, the food was starting to take a toll on me!). The highlight for sure was the homemade dosa and the chai. We headed out ...'
+cover: ./cover.jpg
+description: The South of India in the summer = monsoon central
 readTime: 2
 ---
 

@@ -1,11 +1,12 @@
 ---
-title: 'Feeling Gold in the Golden Triangle'
-slug: 'feeling-gold-in-the-golden-triangle'
+title: Feeling Gold in the Golden Triangle
+slug: feeling-gold-in-the-golden-triangle
 date: 2019-09-19
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'if you''re just tuning in, i''m on holiday in South Asia! check out part 1, part 2, and part 3. We had another early morning flight from Goa and we braved the monsoon while driving to the airport. The flight was pretty uneventful except for some turbulence in the beginning and we touched down in New Delhi ...'
+cover: ./cover.jpg
+description: Three cities, loads of monuments, and one monkey that had a flip-flop snack!
 readTime: 6
 ---
 

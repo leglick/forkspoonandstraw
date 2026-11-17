@@ -1,11 +1,12 @@
 ---
-title: 'End of April updates'
-slug: 'end-of-april-updates'
+title: End of April updates
+slug: end-of-april-updates
 date: 2019-07-19
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'After I came back from Spring Break with Kass in Spain and Portugal, Melissa had some friends staying  in Nice so we did a few winery tours, got some classic niçois foods and went to Èze and Villefranche for the afternoon. I had Easter Monday off so I had a long work-week of 1 day ... tant pis !'
+cover: ./cover.jpg
+description: Getting back in the swing of things and soaking up the springtime sun in le Sud
 readTime: 2
 ---
 

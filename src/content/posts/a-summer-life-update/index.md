@@ -1,11 +1,12 @@
 ---
-title: 'A Summer Life Update'
-slug: 'a-summer-life-update'
+title: A Summer Life Update
+slug: a-summer-life-update
 date: 2019-09-20
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Hello! Bonjour ! I''ve been catching up on my sleep from all my travel this past year and summer (living in Nice, visiting Eastern Europe, a trip to Greece, a summer holiday in the Maldives ...) and of course blogging all about it! I came back to the States in mid-May and after a week catching up with my grandparents ..'
+cover: ./cover.jpg
+description: aka what I've been up to between travels and living in France
 readTime: 2
 ---
 

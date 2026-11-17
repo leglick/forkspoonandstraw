@@ -1,11 +1,13 @@
 ---
-title: 'add three letters to Paris, and you have Paradise'
-slug: 'add-three-letters-to-paris-and-you-have-paradise'
+title: add three letters to Paris, and you have Paradise
+slug: add-three-letters-to-paris-and-you-have-paradise
 date: 2019-02-28
-categories: ['Travel', 'Pardon My Franglais']
+categories:
+  - Travel
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'Youpi ! The only thing worth waking up for at 5 am for is a weekend trip to Paris – and what better way to commencer our February break? Les filles de Chateauneuf headed out of the apartment before the sun was up and only stopped once to pee on the walk to the train station (not naming names .. *cough cough* Hallie).'
+cover: ./cover.jpg
+description: A weekend in Paris with my colocs
 readTime: 6
 ---
 

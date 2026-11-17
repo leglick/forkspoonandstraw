@@ -1,11 +1,12 @@
 ---
-title: 'A Tourist in My Own City'
-slug: 'a-tourist-in-my-own-city'
+title: A Tourist in My Own City
+slug: a-tourist-in-my-own-city
 date: 2019-03-28
-categories: ['Pardon My Franglais']
+categories:
+  - Pardon My Franglais
 tags: []
-cover: './cover.jpg'
-description: 'I was super lucky to have two friends come visit me in February and the beginning of March! It was so great to see them and also let me be a tourist in Nice. My friend Isabelle came right after i got back from Paris so we both were wiped from our long journeys.'
+cover: ./cover.jpg
+description: I was super lucky to have two friends come visit me in February and the beginning of March! It was so great to see them and also let me be a tourist in Nice.
 readTime: 4
 ---
 

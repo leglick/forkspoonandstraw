@@ -1,11 +1,12 @@
 ---
-title: 'Andiamo a Cinque Terre'
-slug: 'andiamo-a-cinque-terre'
+title: Andiamo a Cinque Terre
+slug: andiamo-a-cinque-terre
 date: 2019-07-22
-categories: ['Travel']
+categories:
+  - Travel
 tags: []
-cover: './cover.jpg'
-description: 'Tuesday morning I got up bright and early to meet my (ex 😭) housemate Melissa at her new apartment ... we were doing a little getaway to Cinque Terre! We grabbed our bags, the dog and some pastries and headed to the train station. We made it to Ventimiglia, just across the Italian border,'
+cover: ./cover.jpg
+description: Pasta, pizza, and a whole lotta walking!
 readTime: 5
 ---
 
