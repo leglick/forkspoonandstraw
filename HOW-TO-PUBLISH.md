@@ -140,8 +140,8 @@ Write below the closing `---`. Leave a blank line between paragraphs.
 | One photo between paragraphs | `![describe the photo](./images/inline/01.jpg)` | Full-width rounded photo |
 | Swipe gallery | `:::gallery{folder="ferry"}` | Swipeable row of portrait tiles with "swipe - N photos" and a progress line |
 | Pull-quote / aside band | `> Pro-traveler tip: book dinner early` | Full-width blue band, italic serif text |
-| Bullet list | `* item` or `- item` | See the note below |
-| Numbered list | `1. item` | See the note below |
+| Bullet list | `* item` or `- item` | Small coral dot before each item, space between items |
+| Numbered list | `1. item` | Coral numbers, space between items |
 
 Rules that matter:
 - **Gallery and single-photo lines must each be on their own line**, with a blank
@@ -163,9 +163,9 @@ Rules that matter:
 - Don't use HTML tags (`<br>`, `<iframe>`, ...). They are silently dropped.
 - Tables, code blocks, footnotes and `---` divider lines aren't styled for this site,
   so avoid them.
-- **Bullet/numbered lists**: they work, but right now the site shows them without
-  bullet markers or spacing, so items look like one block of text (this affects about
-  26 older posts too). It's a known display issue, not a mistake in your writing.
+- **Lists**: put a blank line before the first item, and one item per line. Each bullet
+  gets a small coral dot and each numbered item a coral number. Don't put a loose line
+  (like a lone "and") right under an item: it becomes part of that item.
 
 ## 6. Preview locally (optional but recommended)
 

@@ -235,6 +235,40 @@ a:hover {
   border-radius: var(--radius-card);
 }
 
+/* The reset above strips list markers sitewide, so lists inside posts need
+   them put back: a small coral dot per bullet, coral numbers for numbered
+   lists, and a little air between items (migrated posts write one
+   recommendation per bullet, so without this they read as one paragraph). */
+.prose ul > li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.prose ul > li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.78em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--paprika);
+}
+
+.prose ol {
+  list-style: decimal;
+  padding-left: 26px;
+}
+
+.prose ol > li::marker {
+  color: var(--paprika);
+  font-weight: 700;
+}
+
+.prose li + li {
+  margin-top: var(--sp-10);
+}
+
 /* Wix blockquotes ("> Very Stephen King vibes.") are the closest existing
    content maps to the Callout component's full-bleed treatment — style
    them the same way rather than requiring every legacy post to be rewritten
